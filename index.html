@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>החוט שמחבר — דור ההמשך</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;600&family=Rubik:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Heebo', sans-serif;
+      background: radial-gradient(ellipse at 80% 10%, rgba(190,75,30,0.10) 0%, transparent 48%),
+                  radial-gradient(ellipse at 20% 90%, rgba(190,75,30,0.06) 0%, transparent 40%),
+                  #fdfcfc;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 24px;
+      color: #0d0d0d;
+    }
+
+    .line {
+      width: 1px;
+      height: 60px;
+      background: linear-gradient(to bottom, transparent, rgba(190,75,30,0.35));
+      margin-bottom: 36px;
+      animation: fadeUp 0.6s ease-out both;
+    }
+    .line.bottom {
+      background: linear-gradient(to top, transparent, rgba(190,75,30,0.35));
+      margin-top: 36px;
+      margin-bottom: 0;
+      animation-delay: 0.5s;
+    }
+
+    .label {
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #be4b1e;
+      opacity: 0.65;
+      margin-bottom: 16px;
+      animation: fadeUp 0.6s 0.1s ease-out both;
+    }
+
+    h1 {
+      font-family: 'Rubik', sans-serif;
+      font-weight: 300;
+      font-size: clamp(56px, 12vw, 86px);
+      line-height: 0.92;
+      letter-spacing: -0.01em;
+      text-align: center;
+      margin-bottom: 20px;
+      animation: fadeUp 0.6s 0.18s ease-out both;
+    }
+
+    .sub {
+      font-size: clamp(15px, 3vw, 18px);
+      color: #be4b1e;
+      opacity: 0.72;
+      line-height: 1.7;
+      text-align: center;
+      margin-bottom: 32px;
+      animation: fadeUp 0.6s 0.28s ease-out both;
+    }
+
+    .divider {
+      width: 36px;
+      height: 1px;
+      background: #e8e5e1;
+      margin: 0 auto 32px;
+      animation: fadeUp 0.6s 0.36s ease-out both;
+    }
+
+    .status-card {
+      background: #fff;
+      border: 1px solid #f0eded;
+      border-radius: 20px;
+      padding: 28px 36px;
+      text-align: center;
+      max-width: 320px;
+      width: 100%;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+      animation: fadeUp 0.6s 0.44s ease-out both;
+    }
+
+    .status-icon {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .status-title {
+      font-family: 'Rubik', sans-serif;
+      font-weight: 300;
+      font-size: 22px;
+      color: #0d0d0d;
+      margin-bottom: 8px;
+    }
+
+    .status-text {
+      font-size: 13px;
+      color: #be4b1e;
+      opacity: 0.65;
+      line-height: 1.6;
+    }
+
+    .date-chip {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 11px;
+      color: #be4b1e;
+      opacity: 0.55;
+      border: 1px solid #e8e5e1;
+      border-radius: 9999px;
+      padding: 5px 16px;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="line"></div>
+
+  <p class="label">החוט שמחבר</p>
+
+  <h1>דור<br>ההמשך</h1>
+
+  <p class="sub">
+    כנראה שזה פשוט אנחנו...<br>
+    דור ההמשך...
+  </p>
+
+  <div class="divider"></div>
+
+  <div class="status-card">
+    <div class="status-icon">🧵</div>
+    <p class="status-title">הספרייה בדרך אליך</p>
+    <p class="status-text">
+      לאחר האירוע תמצא כאן<br>
+      את כל האנשים שפגשת —<br>
+      שמות, פרטי קשר ומה כל אחד מציע
+    </p>
+    <span class="date-chip">26 במאי 2026</span>
+  </div>
+
+  <div class="line bottom"></div>
+
+</body>
+</html>
