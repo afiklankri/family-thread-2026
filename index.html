@@ -26,6 +26,8 @@
     .card-info h2{font-family:'Rubik',sans-serif;font-weight:300;font-size:20px;color:#0d0d0d;line-height:1.2;margin-bottom:4px}
     .meta{font-size:12px;color:#be4b1e;opacity:.65;margin-bottom:6px}
     .field-chip{display:inline-block;font-size:11px;color:#be4b1e;border:1px solid rgba(190,75,30,.3);padding:3px 12px;border-radius:9999px;background:rgba(255,255,255,.6)}
+    .section{display:flex;flex-direction:column;gap:5px}
+    .section-label{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#0d0d0d;opacity:.45}
     .chips-row{display:flex;flex-wrap:wrap;gap:6px}
     .chip{font-size:11px;padding:4px 10px;border-radius:9999px;border:1px solid #e8e5e1;color:#0d0d0d;background:#fff}
     .chip.filled{background:rgba(190,75,30,.07);border-color:transparent;color:#be4b1e}
@@ -48,60 +50,6 @@
     <input type="search" id="q" placeholder="חיפוש לפי שם..." oninput="filter()">
   </div>
   <div class="grid" id="grid">
-    <div class="card" data-name="רוני חוה ">
-      <div class="card-top">
-        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779910767535-f278nanovh.jpg" class="avatar" alt="רוני חוה ">
-        <div class="card-info">
-          <h2>רוני חוה </h2>
-          <p class="meta">38 · אתונה </p>
-          <span class="field-chip">שיווק ומכירות</span>
-        </div>
-      </div>
-      <div class="chips-row"><span class="chip filled">שיווק דיגיטלי</span><span class="chip filled">כתיבה ותוכן</span><span class="chip filled">חיבורים ונטוורקינג</span></div>
-      
-      <div class="chips-row"><span class="chip">טיולים</span><span class="chip">קריאה</span><span class="chip">מוזיקה</span><span class="chip">סרטים וסדרות</span></div>
-      <p class="fun-fact">בלתי מנוצחת בשש בש ! </p>
-      <div class="card-footer">
-        <a href="https://wa.me/9720545805141" class="wa-btn" target="_blank">WhatsApp</a>
-        <button class="phone-btn" data-phone="+9720545805141" onclick="copyPhone(this)">+9720545805141</button>
-      </div>
-    </div>
-    <div class="card" data-name="יהודה אמויאל">
-      <div class="card-top">
-        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779902142731-qptyjgfv3ai.jpg" class="avatar" alt="יהודה אמויאל">
-        <div class="card-info">
-          <h2>יהודה אמויאל</h2>
-          <p class="meta">51 · באר שבע</p>
-          <span class="field-chip">עסקים ופיננסים · מנהל בנקאות פרטית</span>
-        </div>
-      </div>
-      <div class="chips-row"><span class="chip filled">ייעוץ פיננסי / השקעות</span><span class="chip filled">תרגום / שפות</span></div>
-      <div class="chips-row"><span class="chip">אימון ספורט / כושר</span><span class="chip">ייעוץ משפטי</span><span class="chip">שיווק דיגיטלי</span><span class="chip">בנייה ושיפוצים</span></div>
-      <div class="chips-row"><span class="chip">ספורט</span><span class="chip">מוזיקה</span><span class="chip">טיולים</span><span class="chip">משחקי לוח</span><span class="chip">כושר</span><span class="chip">טבע</span></div>
-      <p class="fun-fact">שאני יודע גרמנית</p>
-      <div class="card-footer">
-        <a href="https://wa.me/972526064553" class="wa-btn" target="_blank">WhatsApp</a>
-        <button class="phone-btn" data-phone="+972526064553" onclick="copyPhone(this)">+972526064553</button>
-      </div>
-    </div>
-    <div class="card" data-name="אלה אמויאל">
-      <div class="card-top">
-        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779900739014-a8qdze6uwtb.jpg" class="avatar" alt="אלה אמויאל">
-        <div class="card-info">
-          <h2>אלה אמויאל</h2>
-          <p class="meta">50 · באר שבע</p>
-          <span class="field-chip">רפואה ובריאות · מנהלת משאבי אנוש סורוקה</span>
-        </div>
-      </div>
-      <div class="chips-row"><span class="chip filled">רפואה ובריאות</span></div>
-      
-      <div class="chips-row"><span class="chip">ספורט</span><span class="chip">ריקוד</span></div>
-      <p class="fun-fact">אוהבת הופעות</p>
-      <div class="card-footer">
-        <a href="https://wa.me/9720506263861" class="wa-btn" target="_blank">WhatsApp</a>
-        <button class="phone-btn" data-phone="+9720506263861" onclick="copyPhone(this)">+9720506263861</button>
-      </div>
-    </div>
     <div class="card" data-name="אדיר ביתן">
       <div class="card-top">
         <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779899239773-2nu562muy5c.jpg" class="avatar" alt="אדיר ביתן">
@@ -111,49 +59,49 @@
           <span class="field-chip">רפואה ובריאות · ניהול אסונות וחירום</span>
         </div>
       </div>
-      <div class="chips-row"><span class="chip filled">ייעוץ עסקי / יזמות</span><span class="chip filled">רפואה ובריאות</span><span class="chip filled">חיבורים ונטוורקינג</span><span class="chip filled">צילום / וידאו</span></div>
-      <div class="chips-row"><span class="chip">פיתוח תוכנה / טכנולוגיה</span><span class="chip">רפואה ובריאות</span><span class="chip">חיבורים ונטוורקינג</span></div>
-      <div class="chips-row"><span class="chip">מוזיקה</span><span class="chip">ספורט</span><span class="chip">צילום</span><span class="chip">גיימינג</span></div>
+      <div class="section"><p class="section-label">מה אני יכול/ה לעזור</p><div class="chips-row"><span class="chip filled">ייעוץ עסקי / יזמות</span><span class="chip filled">רפואה ובריאות</span><span class="chip filled">חיבורים ונטוורקינג</span><span class="chip filled">צילום / וידאו</span></div></div>
+      <div class="section"><p class="section-label">במה אשמח לעזרה</p><div class="chips-row"><span class="chip">פיתוח תוכנה / טכנולוגיה</span><span class="chip">רפואה ובריאות</span><span class="chip">חיבורים ונטוורקינג</span></div></div>
+      <div class="section"><p class="section-label">תחביבים</p><div class="chips-row"><span class="chip">מוזיקה</span><span class="chip">ספורט</span><span class="chip">צילום</span><span class="chip">גיימינג</span></div></div>
       <p class="fun-fact">חבר טוב של מנגל</p>
       <div class="card-footer">
         <a href="https://wa.me/9720532583529" class="wa-btn" target="_blank">WhatsApp</a>
         <button class="phone-btn" data-phone="+9720532583529" onclick="copyPhone(this)">+9720532583529</button>
       </div>
     </div>
-    <div class="card" data-name="נועה שוורץ ">
+    <div class="card" data-name="אדם אלגרינאוי">
       <div class="card-top">
-        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779898799563-kjdowy4tlf9.jpg" class="avatar" alt="נועה שוורץ ">
+        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779814136473-q3eoq94gi29.jpg" class="avatar" alt="אדם אלגרינאוי">
         <div class="card-info">
-          <h2>נועה שוורץ </h2>
-          <p class="meta">28 · אופקים</p>
-          <span class="field-chip">חינוך והוראה · מנהלת הוסטל לילדים ונוער על הרצף האוטיסטי</span>
+          <h2>אדם אלגרינאוי</h2>
+          <p class="meta">21 · רהט</p>
+          <span class="field-chip">סטודנט/ית · מדעי המחשב</span>
         </div>
       </div>
-      <div class="chips-row"><span class="chip filled">טיפול בילדים</span></div>
-      
-      <div class="chips-row"><span class="chip">בישול</span><span class="chip">יצירה ואומנות</span><span class="chip">טיולים</span></div>
-      <p class="fun-fact">שונאת זיתים </p>
+      <div class="section"><p class="section-label">מה אני יכול/ה לעזור</p><div class="chips-row"><span class="chip filled">פיתוח תוכנה / טכנולוגיה</span><span class="chip filled">תרגום / שפות</span></div></div>
+      <div class="section"><p class="section-label">במה אשמח לעזרה</p><div class="chips-row"><span class="chip">שיווק דיגיטלי</span></div></div>
+      <div class="section"><p class="section-label">תחביבים</p><div class="chips-row"><span class="chip">גיימינג</span><span class="chip">מוזיקה</span><span class="chip">ספורט</span></div></div>
+      <p class="fun-fact">אני ערבי</p>
       <div class="card-footer">
-        <a href="https://wa.me/972502477743" class="wa-btn" target="_blank">WhatsApp</a>
-        <button class="phone-btn" data-phone="+972502477743" onclick="copyPhone(this)">+972502477743</button>
+        <a href="https://wa.me/972543566160" class="wa-btn" target="_blank">WhatsApp</a>
+        <button class="phone-btn" data-phone="0543566160" onclick="copyPhone(this)">054-3566160</button>
       </div>
     </div>
-    <div class="card" data-name="קובי סבאג">
+    <div class="card" data-name="אוהד לנקרי">
       <div class="card-top">
-        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779898463053-efvs8t7ng7j.jpg" class="avatar" alt="קובי סבאג">
+        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779814247138-h9clnmcnxk9.jpg" class="avatar" alt="אוהד לנקרי">
         <div class="card-info">
-          <h2>קובי סבאג</h2>
-          <p class="meta">36 · שדרות</p>
-          <span class="field-chip">פרילנס / עצמאי · דיינות. סופר סת&quot;ם</span>
+          <h2>אוהד לנקרי</h2>
+          <p class="meta">24 · אופקים / בש</p>
+          <span class="field-chip">סטודנט/ית · הנדסת תעשייה וניהול</span>
         </div>
       </div>
-      
-      
-      
-      <p class="fun-fact">.</p>
+      <div class="section"><p class="section-label">מה אני יכול/ה לעזור</p><div class="chips-row"><span class="chip filled">ניהול רשתות חברתיות</span><span class="chip filled">אירועים ולוגיסטיקה</span><span class="chip filled">בישול / קייטרינג</span></div></div>
+      <div class="section"><p class="section-label">במה אשמח לעזרה</p><div class="chips-row"><span class="chip">ייעוץ פיננסי / השקעות</span><span class="chip">ייעוץ משפטי</span><span class="chip">חיבורים ונטוורקינג</span></div></div>
+      <div class="section"><p class="section-label">תחביבים</p><div class="chips-row"><span class="chip">בישול</span><span class="chip">מוזיקה</span><span class="chip">סרטים וסדרות</span></div></div>
+      <p class="fun-fact">אני אלרגי לליצ׳י</p>
       <div class="card-footer">
-        <a href="https://wa.me/972527454616" class="wa-btn" target="_blank">WhatsApp</a>
-        <button class="phone-btn" data-phone="+972527454616" onclick="copyPhone(this)">+972527454616</button>
+        <a href="https://wa.me/972525717486" class="wa-btn" target="_blank">WhatsApp</a>
+        <button class="phone-btn" data-phone="0525717486" onclick="copyPhone(this)">052-5717486</button>
       </div>
     </div>
     <div class="card" data-name="אופיר ביתן">
@@ -165,247 +113,49 @@
           <span class="field-chip">פרילנס / עצמאי · ניהול פרויקטי תשתיות ואופרציות, שרותי בדק בית ושמאות רכוש</span>
         </div>
       </div>
-      <div class="chips-row"><span class="chip filled">ייעוץ עסקי / יזמות</span><span class="chip filled">חיבורים ונטוורקינג</span><span class="chip filled">מנטורינג / קואצ׳ינג</span><span class="chip filled">אירועים ולוגיסטיקה</span><span class="chip filled">כתיבה ותוכן</span></div>
-      <div class="chips-row"><span class="chip">חיבורים ונטוורקינג</span><span class="chip">ייעוץ עסקי / יזמות</span></div>
-      <div class="chips-row"><span class="chip">גיימינג</span><span class="chip">מוזיקה</span><span class="chip">כושר</span><span class="chip">סרטים וסדרות</span><span class="chip">כל נושא מיוחד וייחודי</span></div>
+      <div class="section"><p class="section-label">מה אני יכול/ה לעזור</p><div class="chips-row"><span class="chip filled">ייעוץ עסקי / יזמות</span><span class="chip filled">חיבורים ונטוורקינג</span><span class="chip filled">מנטורינג / קואצ׳ינג</span><span class="chip filled">אירועים ולוגיסטיקה</span><span class="chip filled">כתיבה ותוכן</span></div></div>
+      <div class="section"><p class="section-label">במה אשמח לעזרה</p><div class="chips-row"><span class="chip">חיבורים ונטוורקינג</span><span class="chip">ייעוץ עסקי / יזמות</span></div></div>
+      <div class="section"><p class="section-label">תחביבים</p><div class="chips-row"><span class="chip">גיימינג</span><span class="chip">מוזיקה</span><span class="chip">כושר</span><span class="chip">סרטים וסדרות</span><span class="chip">כל נושא מיוחד וייחודי</span></div></div>
       <p class="fun-fact">מתעניין בסיפורים מיוחדים</p>
       <div class="card-footer">
         <a href="https://wa.me/972529251036" class="wa-btn" target="_blank">WhatsApp</a>
         <button class="phone-btn" data-phone="+972529251036" onclick="copyPhone(this)">+972529251036</button>
       </div>
     </div>
-    <div class="card" data-name="ori ezra">
+    <div class="card" data-name="אוריאן שהרבני ">
       <div class="card-top">
-        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779826551964-6p59dgv8r98.jpg" class="avatar" alt="Ori Ezra">
+        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779814231043-ms0nz95lb8.jpg" class="avatar" alt="אוריאן שהרבני ">
         <div class="card-info">
-          <h2>Ori Ezra</h2>
-          <p class="meta">29 · Clearwater, Florida</p>
-          <span class="field-chip">טכנולוגיה ופיתוח · Executive Account Manager</span>
+          <h2>אוריאן שהרבני </h2>
+          <p class="meta">24 · קרית אונו - באר שבע </p>
+          <span class="field-chip">סטודנט/ית</span>
         </div>
       </div>
-      <div class="chips-row"><span class="chip filled">ייעוץ עסקי / יזמות</span><span class="chip filled">נדל&quot;ן</span><span class="chip filled">נהיגה / הסעות</span><span class="chip filled">פיתוח תוכנה / טכנולוגיה</span><span class="chip filled">בנייה ושיפוצים</span></div>
-      
-      <div class="chips-row"><span class="chip">ספורט</span><span class="chip">גיימינג</span><span class="chip">משחקי לוח</span><span class="chip">טיולים</span><span class="chip">טבע</span><span class="chip">Skydiving, SCUBA Diving, Wakeboarding, Off Roading...</span></div>
-      <p class="fun-fact">I like extreme sports</p>
+      <div class="section"><p class="section-label">מה אני יכול/ה לעזור</p><div class="chips-row"><span class="chip filled">חינוך והוראה</span><span class="chip filled">טיפול בילדים</span><span class="chip filled">אימון ספורט / כושר</span></div></div>
+      <div class="section"><p class="section-label">במה אשמח לעזרה</p><div class="chips-row"><span class="chip">חיבורים ונטוורקינג</span></div></div>
+      <div class="section"><p class="section-label">תחביבים</p><div class="chips-row"><span class="chip">ספורט</span><span class="chip">כושר</span><span class="chip">יוגה ומדיטציה</span><span class="chip">טבע</span></div></div>
+      <p class="fun-fact">שיש לי אזרחות צרפתית </p>
       <div class="card-footer">
-        <a href="https://wa.me/17275127971" class="wa-btn" target="_blank">WhatsApp</a>
-        <button class="phone-btn" data-phone="+17275127971" onclick="copyPhone(this)">+17275127971</button>
+        <a href="https://wa.me/972545440268" class="wa-btn" target="_blank">WhatsApp</a>
+        <button class="phone-btn" data-phone="0545440268" onclick="copyPhone(this)">054-5440268</button>
       </div>
     </div>
-    <div class="card" data-name="יסמין ועמי ביתן ">
+    <div class="card" data-name="אייל לנקרי">
       <div class="card-top">
-        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779825813650-60txz4owumi.jpg" class="avatar" alt="יסמין ועמי ביתן ">
+        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779813843193-wz77t4wqneo.jpg" class="avatar" alt="אייל לנקרי">
         <div class="card-info">
-          <h2>יסמין ועמי ביתן </h2>
-          <p class="meta">38 · באר שבע</p>
-          <span class="field-chip">רפואה ובריאות · רופאת ילדים ורופא ריאות</span>
+          <h2>אייל לנקרי</h2>
+          <p class="meta">21 · אופקים</p>
+          <span class="field-chip">אחר · עובד בדודאים</span>
         </div>
       </div>
-      <div class="chips-row"><span class="chip filled">רפואה ובריאות</span></div>
-      <div class="chips-row"><span class="chip">בישול / קייטרינג</span></div>
-      <div class="chips-row"><span class="chip">טיולים</span><span class="chip">מוזיקה</span><span class="chip">קריאה</span><span class="chip">יצירה ואומנות</span><span class="chip">צילום</span><span class="chip">בישול</span></div>
-      <p class="fun-fact">יש לנו שני אוגרים</p>
+      <div class="section"><p class="section-label">מה אני יכול/ה לעזור</p><div class="chips-row"><span class="chip filled">חיבורים ונטוורקינג</span><span class="chip filled">בישול / קייטרינג</span><span class="chip filled">אירועים ולוגיסטיקה</span><span class="chip filled">ניהול רשתות חברתיות</span><span class="chip filled">נהיגה / הסעות</span></div></div>
+      <div class="section"><p class="section-label">במה אשמח לעזרה</p><div class="chips-row"><span class="chip">ייעוץ פיננסי / השקעות</span><span class="chip">נדל&quot;ן</span><span class="chip">ייעוץ עסקי / יזמות</span><span class="chip">אירועים ולוגיסטיקה</span><span class="chip">בנייה ושיפוצים</span></div></div>
+      <div class="section"><p class="section-label">תחביבים</p><div class="chips-row"><span class="chip">טיולים</span><span class="chip">בישול</span><span class="chip">סרטים וסדרות</span><span class="chip">גיימינג</span><span class="chip">טבע</span></div></div>
+      <p class="fun-fact">יש לי תשובה לכל שאלה, נסו אותי</p>
       <div class="card-footer">
-        <a href="https://wa.me/972503418301" class="wa-btn" target="_blank">WhatsApp</a>
-        <button class="phone-btn" data-phone="+972503418301" onclick="copyPhone(this)">+972503418301</button>
-      </div>
-    </div>
-    <div class="card" data-name="שילת וקנין">
-      <div class="card-top">
-        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779825817589-a43fr39cb2q.jpg" class="avatar" alt="שילת וקנין">
-        <div class="card-info">
-          <h2>שילת וקנין</h2>
-          <p class="meta">32 · אופקים</p>
-          <span class="field-chip">אחר · קלינאית תקשורת</span>
-        </div>
-      </div>
-      <div class="chips-row"><span class="chip filled">טיפול בילדים</span></div>
-      
-      
-      <p class="fun-fact">לא מפתיעה</p>
-      <div class="card-footer">
-        <a href="https://wa.me/972524823493" class="wa-btn" target="_blank">WhatsApp</a>
-        <button class="phone-btn" data-phone="+972524823493" onclick="copyPhone(this)">+972524823493</button>
-      </div>
-    </div>
-    <div class="card" data-name="נוי ביתן נבון">
-      <div class="card-top">
-        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779818411544-onidxm40lma.jpg" class="avatar" alt="נוי ביתן נבון">
-        <div class="card-info">
-          <h2>נוי ביתן נבון</h2>
-          <p class="meta">33 · אופקים</p>
-          <span class="field-chip">רפואה ובריאות · אחות במחלקת יולדות</span>
-        </div>
-      </div>
-      <div class="chips-row"><span class="chip filled">רפואה ובריאות</span></div>
-      
-      <div class="chips-row"><span class="chip">בישול</span><span class="chip">יצירה ואומנות</span><span class="chip">ריקוד</span></div>
-      <p class="fun-fact">שאני בררנית באוכל</p>
-      <div class="card-footer">
-        <a href="https://wa.me/9720524898642" class="wa-btn" target="_blank">WhatsApp</a>
-        <button class="phone-btn" data-phone="+9720524898642" onclick="copyPhone(this)">+9720524898642</button>
-      </div>
-    </div>
-    <div class="card" data-name="שיראל בוהדנה">
-      <div class="card-top">
-        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779822222128-wo3emx0fmt.jpg" class="avatar" alt="שיראל בוהדנה">
-        <div class="card-info">
-          <h2>שיראל בוהדנה</h2>
-          <p class="meta">38 · אופקים</p>
-          <span class="field-chip">חינוך והוראה · גיל הרך</span>
-        </div>
-      </div>
-      <div class="chips-row"><span class="chip filled">חינוך והוראה</span><span class="chip filled">בנייה ושיפוצים</span><span class="chip filled">טיפול בילדים</span></div>
-      <div class="chips-row"><span class="chip">אימון ספורט / כושר</span><span class="chip">צילום / וידאו</span><span class="chip">שיווק דיגיטלי</span></div>
-      <div class="chips-row"><span class="chip">בישול</span><span class="chip">מוזיקה</span><span class="chip">יצירה ואומנות</span><span class="chip">צילום</span><span class="chip">כושר</span></div>
-      <p class="fun-fact">אני</p>
-      <div class="card-footer">
-        <a href="https://wa.me/9720526800149" class="wa-btn" target="_blank">WhatsApp</a>
-        <button class="phone-btn" data-phone="+9720526800149" onclick="copyPhone(this)">+9720526800149</button>
-      </div>
-    </div>
-    <div class="card" data-name="רותם ביתן">
-      <div class="card-top">
-        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779821953410-oaev2ojc5g.jpg" class="avatar" alt="רותם ביתן">
-        <div class="card-info">
-          <h2>רותם ביתן</h2>
-          <p class="meta">37 · באר שבע</p>
-          <span class="field-chip">הנדסה ובנייה · pmo</span>
-        </div>
-      </div>
-      <div class="chips-row"><span class="chip filled">אימון ספורט / כושר</span></div>
-      <div class="chips-row"><span class="chip">אימון ספורט / כושר</span></div>
-      <div class="chips-row"><span class="chip">ספורט</span><span class="chip">טיולים</span><span class="chip">סרטים וסדרות</span><span class="chip">כושר</span></div>
-      <p class="fun-fact">יש לי אחות תאומה </p>
-      <div class="card-footer">
-        <a href="https://wa.me/9720545507797" class="wa-btn" target="_blank">WhatsApp</a>
-        <button class="phone-btn" data-phone="+9720545507797" onclick="copyPhone(this)">+9720545507797</button>
-      </div>
-    </div>
-    <div class="card" data-name="שירה שלמה הכהן">
-      <div class="card-top">
-        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779821559361-vglti8dxvzg.jpg" class="avatar" alt="שירה שלמה הכהן">
-        <div class="card-info">
-          <h2>שירה שלמה הכהן</h2>
-          <p class="meta">48 · אופקים</p>
-          <span class="field-chip">ממשל ומגזר ציבורי · מנהלת פרויקטים במנהל חינוך</span>
-        </div>
-      </div>
-      <div class="chips-row"><span class="chip filled">חינוך והוראה</span><span class="chip filled">טיפול בילדים</span><span class="chip filled">בישול / קייטרינג</span></div>
-      <div class="chips-row"><span class="chip">אימון ספורט / כושר</span></div>
-      
-      <p class="fun-fact">חולמת על טיול אחרי צבא עם כל המשפחה</p>
-      <div class="card-footer">
-        <a href="https://wa.me/9720509002622" class="wa-btn" target="_blank">WhatsApp</a>
-        <button class="phone-btn" data-phone="+9720509002622" onclick="copyPhone(this)">+9720509002622</button>
-      </div>
-    </div>
-    <div class="card" data-name="צפריר נבון ">
-      <div class="card-top">
-        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779818951533-epqt59v7r3t.jpg" class="avatar" alt="צפריר נבון ">
-        <div class="card-info">
-          <h2>צפריר נבון </h2>
-          <p class="meta">38 · אופקים </p>
-          <span class="field-chip">הנדסה ובנייה · הנדסה כימית</span>
-        </div>
-      </div>
-      <div class="chips-row"><span class="chip filled">בישול / קייטרינג</span></div>
-      <div class="chips-row"><span class="chip">אימון ספורט / כושר</span></div>
-      <div class="chips-row"><span class="chip">צילום</span><span class="chip">בישול</span><span class="chip">ספורט</span><span class="chip">כושר</span></div>
-      <p class="fun-fact">.</p>
-      <div class="card-footer">
-        <a href="https://wa.me/972543006285" class="wa-btn" target="_blank">WhatsApp</a>
-        <button class="phone-btn" data-phone="+972543006285" onclick="copyPhone(this)">+972543006285</button>
-      </div>
-    </div>
-    <div class="card" data-name="שהם ביתן">
-      <div class="card-top">
-        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779818479606-iksiqj6j8vc.jpg" class="avatar" alt="שהם ביתן">
-        <div class="card-info">
-          <h2>שהם ביתן</h2>
-          <p class="meta">24 · אופקים</p>
-          <span class="field-chip">רפואה ובריאות · דימותנית רפואית</span>
-        </div>
-      </div>
-      <div class="chips-row"><span class="chip filled">עיצוב גרפי / UI</span><span class="chip filled">אירועים ולוגיסטיקה</span><span class="chip filled">טיפול בילדים</span><span class="chip filled">נהיגה / הסעות</span></div>
-      <div class="chips-row"><span class="chip">ייעוץ עסקי / יזמות</span><span class="chip">נדל&quot;ן</span><span class="chip">מנטורינג / קואצ׳ינג</span></div>
-      <div class="chips-row"><span class="chip">טיולים</span><span class="chip">סרטים וסדרות</span><span class="chip">יצירה ואומנות</span><span class="chip">מוזיקה</span><span class="chip">ריקוד</span></div>
-      <p class="fun-fact">אני לא אוהבת גמבה</p>
-      <div class="card-footer">
-        <a href="https://wa.me/972536287262" class="wa-btn" target="_blank">WhatsApp</a>
-        <button class="phone-btn" data-phone="+972536287262" onclick="copyPhone(this)">+972536287262</button>
-      </div>
-    </div>
-    <div class="card" data-name="קובי וקנין">
-      <div class="card-top">
-        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779818096012-0itaafim364k.jpg" class="avatar" alt="קובי וקנין">
-        <div class="card-info">
-          <h2>קובי וקנין</h2>
-          <p class="meta">32 · אופקים</p>
-          <span class="field-chip">אחר · טייס ניסוי על מטוסי אנדרטה</span>
-        </div>
-      </div>
-      <div class="chips-row"><span class="chip filled">כתיבה ותוכן</span></div>
-      
-      <div class="chips-row"><span class="chip">טיולים</span><span class="chip">מוזיקה</span><span class="chip">קריאה</span><span class="chip">טבע</span><span class="chip">כתיבה</span></div>
-      <p class="fun-fact">אני גאה בצד הכורדי שלי יותר מהמרוקאי</p>
-      <div class="card-footer">
-        <a href="https://wa.me/972528282156" class="wa-btn" target="_blank">WhatsApp</a>
-        <button class="phone-btn" data-phone="+972528282156" onclick="copyPhone(this)">+972528282156</button>
-      </div>
-    </div>
-    <div class="card" data-name="ברית בן דוד ">
-      <div class="card-top">
-        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779817861214-2vtt0zcvujr.jpg" class="avatar" alt="ברית בן דוד ">
-        <div class="card-info">
-          <h2>ברית בן דוד </h2>
-          <p class="meta">32 · בית דגן</p>
-          <span class="field-chip">טכנולוגיה ופיתוח · מפתחת AI</span>
-        </div>
-      </div>
-      <div class="chips-row"><span class="chip filled">פיתוח תוכנה / טכנולוגיה</span></div>
-      <div class="chips-row"><span class="chip">טיפול בילדים</span><span class="chip">בישול / קייטרינג</span></div>
-      <div class="chips-row"><span class="chip">טיולים</span><span class="chip">יוגה ומדיטציה</span><span class="chip">ריקוד</span><span class="chip">יצירה ואומנות</span></div>
-      <p class="fun-fact">נולדתי בדרום אפריקה</p>
-      <div class="card-footer">
-        <a href="https://wa.me/972526616255" class="wa-btn" target="_blank">WhatsApp</a>
-        <button class="phone-btn" data-phone="+972526616255" onclick="copyPhone(this)">+972526616255</button>
-      </div>
-    </div>
-    <div class="card" data-name="מתן בן דוד">
-      <div class="card-top">
-        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779817899001-jgzwji70emk.jpg" class="avatar" alt="מתן בן דוד">
-        <div class="card-info">
-          <h2>מתן בן דוד</h2>
-          <p class="meta">35 · בית דגן</p>
-          <span class="field-chip">הנדסה ובנייה · אדריכלות ועיצוב פנים</span>
-        </div>
-      </div>
-      <div class="chips-row"><span class="chip filled">בנייה ושיפוצים</span></div>
-      <div class="chips-row"><span class="chip">פיתוח תוכנה / טכנולוגיה</span></div>
-      <div class="chips-row"><span class="chip">טיולים</span><span class="chip">יצירה ואומנות</span></div>
-      <p class="fun-fact">נולדתי בדרום אפריקה</p>
-      <div class="card-footer">
-        <a href="https://wa.me/9720508666946" class="wa-btn" target="_blank">WhatsApp</a>
-        <button class="phone-btn" data-phone="+9720508666946" onclick="copyPhone(this)">+9720508666946</button>
-      </div>
-    </div>
-    <div class="card" data-name="ביתן אליהו">
-      <div class="card-top">
-        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779817787225-nfyi8t39g5g.jpg" class="avatar" alt="ביתן אליהו">
-        <div class="card-info">
-          <h2>ביתן אליהו</h2>
-          <p class="meta">70 · באר שבע</p>
-          <span class="field-chip">משפטים · יועץ</span>
-        </div>
-      </div>
-      <div class="chips-row"><span class="chip filled">ייעוץ עסקי / יזמות</span><span class="chip filled">ייעוץ משפטי</span><span class="chip filled">רפואה ובריאות</span><span class="chip filled">טיפול בילדים</span><span class="chip filled">תרגום / שפות</span></div>
-      <div class="chips-row"><span class="chip">ניהול רשתות חברתיות</span><span class="chip">צילום / וידאו</span><span class="chip">בנייה ושיפוצים</span><span class="chip">אירועים ולוגיסטיקה</span><span class="chip">חיבורים ונטוורקינג</span></div>
-      <div class="chips-row"><span class="chip">קריאה</span></div>
-      <p class="fun-fact">.</p>
-      <div class="card-footer">
-        <a href="https://wa.me/972508672500" class="wa-btn" target="_blank">WhatsApp</a>
-        <button class="phone-btn" data-phone="0508672500" onclick="copyPhone(this)">050-8672500</button>
+        <a href="https://wa.me/972522350093" class="wa-btn" target="_blank">WhatsApp</a>
+        <button class="phone-btn" data-phone="0522350093" onclick="copyPhone(this)">052-2350093</button>
       </div>
     </div>
     <div class="card" data-name="איתי נובהארי ">
@@ -417,49 +167,175 @@
           <span class="field-chip">אחר · חייל</span>
         </div>
       </div>
-      <div class="chips-row"><span class="chip filled">עיצוב גרפי / UI</span><span class="chip filled">תרגום / שפות</span><span class="chip filled">פיתוח תוכנה / טכנולוגיה</span><span class="chip filled">אימון ספורט / כושר</span><span class="chip filled">ייעוץ פיננסי / השקעות</span></div>
-      <div class="chips-row"><span class="chip">נדל&quot;ן</span></div>
-      <div class="chips-row"><span class="chip">ספורט</span><span class="chip">טיולים</span><span class="chip">כושר</span><span class="chip">טבע</span><span class="chip">גיימינג</span><span class="chip">מוזיקה</span></div>
+      <div class="section"><p class="section-label">מה אני יכול/ה לעזור</p><div class="chips-row"><span class="chip filled">עיצוב גרפי / UI</span><span class="chip filled">תרגום / שפות</span><span class="chip filled">פיתוח תוכנה / טכנולוגיה</span><span class="chip filled">אימון ספורט / כושר</span><span class="chip filled">ייעוץ פיננסי / השקעות</span></div></div>
+      <div class="section"><p class="section-label">במה אשמח לעזרה</p><div class="chips-row"><span class="chip">נדל&quot;ן</span></div></div>
+      <div class="section"><p class="section-label">תחביבים</p><div class="chips-row"><span class="chip">ספורט</span><span class="chip">טיולים</span><span class="chip">כושר</span><span class="chip">טבע</span><span class="chip">גיימינג</span><span class="chip">מוזיקה</span></div></div>
       <p class="fun-fact">אוהד בית״ר</p>
       <div class="card-footer">
         <a href="https://wa.me/972532825353" class="wa-btn" target="_blank">WhatsApp</a>
         <button class="phone-btn" data-phone="+972532825353" onclick="copyPhone(this)">+972532825353</button>
       </div>
     </div>
-    <div class="card" data-name="רועי ולירון ביתן">
+    <div class="card" data-name="אלה אמויאל">
       <div class="card-top">
-        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779817781899-ayvcm9kh3w.jpg" class="avatar" alt="רועי ולירון ביתן">
+        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779900739014-a8qdze6uwtb.jpg" class="avatar" alt="אלה אמויאל">
         <div class="card-info">
-          <h2>רועי ולירון ביתן</h2>
-          <p class="meta">45 · תל אביב</p>
-          <span class="field-chip">פרילנס / עצמאי · סוחר בבורסה</span>
+          <h2>אלה אמויאל</h2>
+          <p class="meta">50 · באר שבע</p>
+          <span class="field-chip">רפואה ובריאות · מנהלת משאבי אנוש סורוקה</span>
         </div>
       </div>
+      <div class="section"><p class="section-label">מה אני יכול/ה לעזור</p><div class="chips-row"><span class="chip filled">רפואה ובריאות</span></div></div>
       
-      
-      
-      <p class="fun-fact">אין</p>
+      <div class="section"><p class="section-label">תחביבים</p><div class="chips-row"><span class="chip">ספורט</span><span class="chip">ריקוד</span></div></div>
+      <p class="fun-fact">אוהבת הופעות</p>
       <div class="card-footer">
-        <a href="https://wa.me/9720546764980" class="wa-btn" target="_blank">WhatsApp</a>
-        <button class="phone-btn" data-phone="+9720546764980" onclick="copyPhone(this)">+9720546764980</button>
+        <a href="https://wa.me/9720506263861" class="wa-btn" target="_blank">WhatsApp</a>
+        <button class="phone-btn" data-phone="+9720506263861" onclick="copyPhone(this)">+9720506263861</button>
       </div>
     </div>
-    <div class="card" data-name="רותם דדון">
+    <div class="card" data-name="אפיק לנקרי">
       <div class="card-top">
-        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779817435841-66htbktjrl3.jpg" class="avatar" alt="רותם דדון">
+        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779817195319-yknsn8x7ub.jpg" class="avatar" alt="אפיק לנקרי">
         <div class="card-info">
-          <h2>רותם דדון</h2>
-          <p class="meta">40 · באר שבע</p>
-          <span class="field-chip">אחר · רכש</span>
+          <h2>אפיק לנקרי</h2>
+          <p class="meta">26 · אופקים</p>
+          <span class="field-chip">טכנולוגיה ופיתוח · Vibe Coding</span>
         </div>
       </div>
-      
-      
-      <div class="chips-row"><span class="chip">ספורט</span><span class="chip">טיולים</span><span class="chip">בישול</span></div>
-      <p class="fun-fact">הייתי טכנאית מטוסים 10 שנים F15</p>
+      <div class="section"><p class="section-label">מה אני יכול/ה לעזור</p><div class="chips-row"><span class="chip filled">פיתוח תוכנה / טכנולוגיה</span><span class="chip filled">עיצוב גרפי / UI</span><span class="chip filled">אירועים ולוגיסטיקה</span><span class="chip filled">תרגום / שפות</span></div></div>
+      <div class="section"><p class="section-label">במה אשמח לעזרה</p><div class="chips-row"><span class="chip">ייעוץ עסקי / יזמות</span><span class="chip">ייעוץ פיננסי / השקעות</span><span class="chip">חיבורים ונטוורקינג</span><span class="chip">שיווק דיגיטלי</span></div></div>
+      <div class="section"><p class="section-label">תחביבים</p><div class="chips-row"><span class="chip">בישול</span><span class="chip">טיולים</span><span class="chip">גיימינג</span><span class="chip">טבע</span></div></div>
+      <p class="fun-fact">שבוע שעבר האוטו שלי הלך טוטאלוס</p>
       <div class="card-footer">
-        <a href="https://wa.me/972502004799" class="wa-btn" target="_blank">WhatsApp</a>
-        <button class="phone-btn" data-phone="+972502004799" onclick="copyPhone(this)">+972502004799</button>
+        <a href="https://wa.me/972526657644" class="wa-btn" target="_blank">WhatsApp</a>
+        <button class="phone-btn" data-phone="+972526657644" onclick="copyPhone(this)">+972526657644</button>
+      </div>
+    </div>
+    <div class="card" data-name="ביתן אליהו">
+      <div class="card-top">
+        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779817787225-nfyi8t39g5g.jpg" class="avatar" alt="ביתן אליהו">
+        <div class="card-info">
+          <h2>ביתן אליהו</h2>
+          <p class="meta">70 · באר שבע</p>
+          <span class="field-chip">משפטים · יועץ</span>
+        </div>
+      </div>
+      <div class="section"><p class="section-label">מה אני יכול/ה לעזור</p><div class="chips-row"><span class="chip filled">ייעוץ עסקי / יזמות</span><span class="chip filled">ייעוץ משפטי</span><span class="chip filled">רפואה ובריאות</span><span class="chip filled">טיפול בילדים</span><span class="chip filled">תרגום / שפות</span></div></div>
+      <div class="section"><p class="section-label">במה אשמח לעזרה</p><div class="chips-row"><span class="chip">ניהול רשתות חברתיות</span><span class="chip">צילום / וידאו</span><span class="chip">בנייה ושיפוצים</span><span class="chip">אירועים ולוגיסטיקה</span><span class="chip">חיבורים ונטוורקינג</span></div></div>
+      <div class="section"><p class="section-label">תחביבים</p><div class="chips-row"><span class="chip">קריאה</span></div></div>
+      <p class="fun-fact">.</p>
+      <div class="card-footer">
+        <a href="https://wa.me/972508672500" class="wa-btn" target="_blank">WhatsApp</a>
+        <button class="phone-btn" data-phone="0508672500" onclick="copyPhone(this)">050-8672500</button>
+      </div>
+    </div>
+    <div class="card" data-name="ברית בן דוד ">
+      <div class="card-top">
+        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779817861214-2vtt0zcvujr.jpg" class="avatar" alt="ברית בן דוד ">
+        <div class="card-info">
+          <h2>ברית בן דוד </h2>
+          <p class="meta">32 · בית דגן</p>
+          <span class="field-chip">טכנולוגיה ופיתוח · מפתחת AI</span>
+        </div>
+      </div>
+      <div class="section"><p class="section-label">מה אני יכול/ה לעזור</p><div class="chips-row"><span class="chip filled">פיתוח תוכנה / טכנולוגיה</span></div></div>
+      <div class="section"><p class="section-label">במה אשמח לעזרה</p><div class="chips-row"><span class="chip">טיפול בילדים</span><span class="chip">בישול / קייטרינג</span></div></div>
+      <div class="section"><p class="section-label">תחביבים</p><div class="chips-row"><span class="chip">טיולים</span><span class="chip">יוגה ומדיטציה</span><span class="chip">ריקוד</span><span class="chip">יצירה ואומנות</span></div></div>
+      <p class="fun-fact">נולדתי בדרום אפריקה</p>
+      <div class="card-footer">
+        <a href="https://wa.me/972526616255" class="wa-btn" target="_blank">WhatsApp</a>
+        <button class="phone-btn" data-phone="+972526616255" onclick="copyPhone(this)">+972526616255</button>
+      </div>
+    </div>
+    <div class="card" data-name="גיא דרורי">
+      <div class="card-top">
+        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779816179170-2nauxcxvqgn.jpg" class="avatar" alt="גיא דרורי">
+        <div class="card-info">
+          <h2>גיא דרורי</h2>
+          <p class="meta">36 · רמת גן</p>
+          <span class="field-chip">פרילנס / עצמאי</span>
+        </div>
+      </div>
+      <div class="section"><p class="section-label">מה אני יכול/ה לעזור</p><div class="chips-row"><span class="chip filled">תרגום / שפות</span><span class="chip filled">אירועים ולוגיסטיקה</span><span class="chip filled">חינוך והוראה</span><span class="chip filled">כתיבה ותוכן</span></div></div>
+      <div class="section"><p class="section-label">במה אשמח לעזרה</p><div class="chips-row"><span class="chip">ייעוץ משפטי</span></div></div>
+      <div class="section"><p class="section-label">תחביבים</p><div class="chips-row"><span class="chip">גיימינג</span><span class="chip">סרטים וסדרות</span><span class="chip">מוזיקה</span><span class="chip">קריאה</span><span class="chip">משחקי לוח</span><span class="chip">יצירה ואומנות</span></div></div>
+      <p class="fun-fact">אלוף עולם לשעבר בNaruto Arena</p>
+      <div class="card-footer">
+        <a href="https://wa.me/9720524522064" class="wa-btn" target="_blank">WhatsApp</a>
+        <button class="phone-btn" data-phone="+9720524522064" onclick="copyPhone(this)">+9720524522064</button>
+      </div>
+    </div>
+    <div class="card" data-name="הילה ביתן">
+      <div class="card-top">
+        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779817282494-n3l6fpqk4e.jpg" class="avatar" alt="הילה ביתן">
+        <div class="card-info">
+          <h2>הילה ביתן</h2>
+          <p class="meta">44 · מיתר</p>
+          <span class="field-chip">עבודה סוציאלית ורווחה · פסיכותרפיה, טיפול זוגי ומשפחתי</span>
+        </div>
+      </div>
+      <div class="section"><p class="section-label">מה אני יכול/ה לעזור</p><div class="chips-row"><span class="chip filled">אימון ספורט / כושר</span></div></div>
+      <div class="section"><p class="section-label">במה אשמח לעזרה</p><div class="chips-row"><span class="chip">אימון ספורט / כושר</span></div></div>
+      <div class="section"><p class="section-label">תחביבים</p><div class="chips-row"><span class="chip">ספורט</span><span class="chip">טיולים</span><span class="chip">בישול</span><span class="chip">קריאה</span><span class="chip">מוזיקה</span><span class="chip">יוגה ומדיטציה</span><span class="chip">כושר</span></div></div>
+      <p class="fun-fact">שחקנית כדורעף</p>
+      <div class="card-footer">
+        <a href="https://wa.me/9720526054991" class="wa-btn" target="_blank">WhatsApp</a>
+        <button class="phone-btn" data-phone="+9720526054991" onclick="copyPhone(this)">+9720526054991</button>
+      </div>
+    </div>
+    <div class="card" data-name="יהודה אמויאל">
+      <div class="card-top">
+        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779902142731-qptyjgfv3ai.jpg" class="avatar" alt="יהודה אמויאל">
+        <div class="card-info">
+          <h2>יהודה אמויאל</h2>
+          <p class="meta">51 · באר שבע</p>
+          <span class="field-chip">עסקים ופיננסים · מנהל בנקאות פרטית</span>
+        </div>
+      </div>
+      <div class="section"><p class="section-label">מה אני יכול/ה לעזור</p><div class="chips-row"><span class="chip filled">ייעוץ פיננסי / השקעות</span><span class="chip filled">תרגום / שפות</span></div></div>
+      <div class="section"><p class="section-label">במה אשמח לעזרה</p><div class="chips-row"><span class="chip">אימון ספורט / כושר</span><span class="chip">ייעוץ משפטי</span><span class="chip">שיווק דיגיטלי</span><span class="chip">בנייה ושיפוצים</span></div></div>
+      <div class="section"><p class="section-label">תחביבים</p><div class="chips-row"><span class="chip">ספורט</span><span class="chip">מוזיקה</span><span class="chip">טיולים</span><span class="chip">משחקי לוח</span><span class="chip">כושר</span><span class="chip">טבע</span></div></div>
+      <p class="fun-fact">שאני יודע גרמנית</p>
+      <div class="card-footer">
+        <a href="https://wa.me/972526064553" class="wa-btn" target="_blank">WhatsApp</a>
+        <button class="phone-btn" data-phone="+972526064553" onclick="copyPhone(this)">+972526064553</button>
+      </div>
+    </div>
+    <div class="card" data-name="יהל עומיסי">
+      <div class="card-top">
+        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779813965816-0f0qe4pfisb.jpg" class="avatar" alt="יהל עומיסי">
+        <div class="card-info">
+          <h2>יהל עומיסי</h2>
+          <p class="meta">26 · כרם בן שמן </p>
+          <span class="field-chip">אחר · טיפול</span>
+        </div>
+      </div>
+      <div class="section"><p class="section-label">מה אני יכול/ה לעזור</p><div class="chips-row"><span class="chip filled">כתיבה ותוכן</span><span class="chip filled">טיפול בילדים</span><span class="chip filled">אירועים ולוגיסטיקה</span><span class="chip filled">בישול / קייטרינג</span><span class="chip filled">מנטורינג / קואצ׳ינג</span></div></div>
+      <div class="section"><p class="section-label">במה אשמח לעזרה</p><div class="chips-row"><span class="chip">ייעוץ פיננסי / השקעות</span><span class="chip">בנייה ושיפוצים</span><span class="chip">ייעוץ עסקי / יזמות</span><span class="chip">ייעוץ משפטי</span><span class="chip">מנטורינג / קואצ׳ינג</span></div></div>
+      <div class="section"><p class="section-label">תחביבים</p><div class="chips-row"><span class="chip">טיולים</span><span class="chip">מוזיקה</span><span class="chip">משחקי לוח</span><span class="chip">יצירה ואומנות</span><span class="chip">ריקוד</span><span class="chip">יוגה ומדיטציה</span><span class="chip">קרוספיט</span></div></div>
+      <p class="fun-fact">הייתי שש שנים בצבא </p>
+      <div class="card-footer">
+        <a href="https://wa.me/972546677816" class="wa-btn" target="_blank">WhatsApp</a>
+        <button class="phone-btn" data-phone="0546677816" onclick="copyPhone(this)">054-6677816</button>
+      </div>
+    </div>
+    <div class="card" data-name="יסמין ועמי ביתן ">
+      <div class="card-top">
+        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779825813650-60txz4owumi.jpg" class="avatar" alt="יסמין ועמי ביתן ">
+        <div class="card-info">
+          <h2>יסמין ועמי ביתן </h2>
+          <p class="meta">38 · באר שבע</p>
+          <span class="field-chip">רפואה ובריאות · רופאת ילדים ורופא ריאות</span>
+        </div>
+      </div>
+      <div class="section"><p class="section-label">מה אני יכול/ה לעזור</p><div class="chips-row"><span class="chip filled">רפואה ובריאות</span></div></div>
+      <div class="section"><p class="section-label">במה אשמח לעזרה</p><div class="chips-row"><span class="chip">בישול / קייטרינג</span></div></div>
+      <div class="section"><p class="section-label">תחביבים</p><div class="chips-row"><span class="chip">טיולים</span><span class="chip">מוזיקה</span><span class="chip">קריאה</span><span class="chip">יצירה ואומנות</span><span class="chip">צילום</span><span class="chip">בישול</span></div></div>
+      <p class="fun-fact">יש לנו שני אוגרים</p>
+      <div class="card-footer">
+        <a href="https://wa.me/972503418301" class="wa-btn" target="_blank">WhatsApp</a>
+        <button class="phone-btn" data-phone="+972503418301" onclick="copyPhone(this)">+972503418301</button>
       </div>
     </div>
     <div class="card" data-name="ליאור אורנשטיין">
@@ -473,47 +349,65 @@
       </div>
       
       
-      <div class="chips-row"><span class="chip">טיולים</span><span class="chip">סרטים וסדרות</span></div>
+      <div class="section"><p class="section-label">תחביבים</p><div class="chips-row"><span class="chip">טיולים</span><span class="chip">סרטים וסדרות</span></div></div>
       <p class="fun-fact">חופשת החלומות שלי - מיקונוס</p>
       <div class="card-footer">
         <a href="https://wa.me/9720526038554" class="wa-btn" target="_blank">WhatsApp</a>
         <button class="phone-btn" data-phone="+9720526038554" onclick="copyPhone(this)">+9720526038554</button>
       </div>
     </div>
-    <div class="card" data-name="עמיר ביתן">
+    <div class="card" data-name="מתן בן דוד">
       <div class="card-top">
-        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779817319074-93m48n009a5.jpg" class="avatar" alt="עמיר ביתן">
+        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779817899001-jgzwji70emk.jpg" class="avatar" alt="מתן בן דוד">
         <div class="card-info">
-          <h2>עמיר ביתן</h2>
-          <p class="meta">45 · מיתר</p>
-          <span class="field-chip">טכנולוגיה ופיתוח</span>
+          <h2>מתן בן דוד</h2>
+          <p class="meta">35 · בית דגן</p>
+          <span class="field-chip">הנדסה ובנייה · אדריכלות ועיצוב פנים</span>
         </div>
       </div>
-      <div class="chips-row"><span class="chip filled">טיפול בילדים</span></div>
-      <div class="chips-row"><span class="chip">מנטורינג / קואצ׳ינג</span><span class="chip">בישול / קייטרינג</span><span class="chip">אימון ספורט / כושר</span><span class="chip">תרגום / שפות</span><span class="chip">ניהול רשתות חברתיות</span></div>
-      <div class="chips-row"><span class="chip">יצירה ואומנות</span><span class="chip">טבע</span></div>
-      <p class="fun-fact">פעמיים חצי מרתון</p>
+      <div class="section"><p class="section-label">מה אני יכול/ה לעזור</p><div class="chips-row"><span class="chip filled">בנייה ושיפוצים</span></div></div>
+      <div class="section"><p class="section-label">במה אשמח לעזרה</p><div class="chips-row"><span class="chip">פיתוח תוכנה / טכנולוגיה</span></div></div>
+      <div class="section"><p class="section-label">תחביבים</p><div class="chips-row"><span class="chip">טיולים</span><span class="chip">יצירה ואומנות</span></div></div>
+      <p class="fun-fact">נולדתי בדרום אפריקה</p>
       <div class="card-footer">
-        <a href="https://wa.me/972526054990" class="wa-btn" target="_blank">WhatsApp</a>
-        <button class="phone-btn" data-phone="+972526054990" onclick="copyPhone(this)">+972526054990</button>
+        <a href="https://wa.me/9720508666946" class="wa-btn" target="_blank">WhatsApp</a>
+        <button class="phone-btn" data-phone="+9720508666946" onclick="copyPhone(this)">+9720508666946</button>
       </div>
     </div>
-    <div class="card" data-name="הילה ביתן">
+    <div class="card" data-name="נוי ביתן נבון">
       <div class="card-top">
-        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779817282494-n3l6fpqk4e.jpg" class="avatar" alt="הילה ביתן">
+        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779818411544-onidxm40lma.jpg" class="avatar" alt="נוי ביתן נבון">
         <div class="card-info">
-          <h2>הילה ביתן</h2>
-          <p class="meta">44 · מיתר</p>
-          <span class="field-chip">עבודה סוציאלית ורווחה · פסיכותרפיה, טיפול זוגי ומשפחתי</span>
+          <h2>נוי ביתן נבון</h2>
+          <p class="meta">33 · אופקים</p>
+          <span class="field-chip">רפואה ובריאות · אחות במחלקת יולדות</span>
         </div>
       </div>
-      <div class="chips-row"><span class="chip filled">אימון ספורט / כושר</span></div>
-      <div class="chips-row"><span class="chip">אימון ספורט / כושר</span></div>
-      <div class="chips-row"><span class="chip">ספורט</span><span class="chip">טיולים</span><span class="chip">בישול</span><span class="chip">קריאה</span><span class="chip">מוזיקה</span><span class="chip">יוגה ומדיטציה</span><span class="chip">כושר</span></div>
-      <p class="fun-fact">שחקנית כדורעף</p>
+      <div class="section"><p class="section-label">מה אני יכול/ה לעזור</p><div class="chips-row"><span class="chip filled">רפואה ובריאות</span></div></div>
+      
+      <div class="section"><p class="section-label">תחביבים</p><div class="chips-row"><span class="chip">בישול</span><span class="chip">יצירה ואומנות</span><span class="chip">ריקוד</span></div></div>
+      <p class="fun-fact">שאני בררנית באוכל</p>
       <div class="card-footer">
-        <a href="https://wa.me/9720526054991" class="wa-btn" target="_blank">WhatsApp</a>
-        <button class="phone-btn" data-phone="+9720526054991" onclick="copyPhone(this)">+9720526054991</button>
+        <a href="https://wa.me/9720524898642" class="wa-btn" target="_blank">WhatsApp</a>
+        <button class="phone-btn" data-phone="+9720524898642" onclick="copyPhone(this)">+9720524898642</button>
+      </div>
+    </div>
+    <div class="card" data-name="נועה שוורץ ">
+      <div class="card-top">
+        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779898799563-kjdowy4tlf9.jpg" class="avatar" alt="נועה שוורץ ">
+        <div class="card-info">
+          <h2>נועה שוורץ </h2>
+          <p class="meta">28 · אופקים</p>
+          <span class="field-chip">חינוך והוראה · מנהלת הוסטל לילדים ונוער על הרצף האוטיסטי</span>
+        </div>
+      </div>
+      <div class="section"><p class="section-label">מה אני יכול/ה לעזור</p><div class="chips-row"><span class="chip filled">טיפול בילדים</span></div></div>
+      
+      <div class="section"><p class="section-label">תחביבים</p><div class="chips-row"><span class="chip">בישול</span><span class="chip">יצירה ואומנות</span><span class="chip">טיולים</span></div></div>
+      <p class="fun-fact">שונאת זיתים </p>
+      <div class="card-footer">
+        <a href="https://wa.me/972502477743" class="wa-btn" target="_blank">WhatsApp</a>
+        <button class="phone-btn" data-phone="+972502477743" onclick="copyPhone(this)">+972502477743</button>
       </div>
     </div>
     <div class="card" data-name="נועה כהן">
@@ -534,60 +428,6 @@
         <button class="phone-btn" data-phone="+9720542585823" onclick="copyPhone(this)">+9720542585823</button>
       </div>
     </div>
-    <div class="card" data-name="אפיק לנקרי">
-      <div class="card-top">
-        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779817195319-yknsn8x7ub.jpg" class="avatar" alt="אפיק לנקרי">
-        <div class="card-info">
-          <h2>אפיק לנקרי</h2>
-          <p class="meta">26 · אופקים</p>
-          <span class="field-chip">טכנולוגיה ופיתוח · Vibe Coding</span>
-        </div>
-      </div>
-      <div class="chips-row"><span class="chip filled">פיתוח תוכנה / טכנולוגיה</span><span class="chip filled">עיצוב גרפי / UI</span><span class="chip filled">אירועים ולוגיסטיקה</span><span class="chip filled">תרגום / שפות</span></div>
-      <div class="chips-row"><span class="chip">ייעוץ עסקי / יזמות</span><span class="chip">ייעוץ פיננסי / השקעות</span><span class="chip">חיבורים ונטוורקינג</span><span class="chip">שיווק דיגיטלי</span></div>
-      <div class="chips-row"><span class="chip">בישול</span><span class="chip">טיולים</span><span class="chip">גיימינג</span><span class="chip">טבע</span></div>
-      <p class="fun-fact">שבוע שעבר האוטו שלי הלך טוטאלוס</p>
-      <div class="card-footer">
-        <a href="https://wa.me/972526657644" class="wa-btn" target="_blank">WhatsApp</a>
-        <button class="phone-btn" data-phone="+972526657644" onclick="copyPhone(this)">+972526657644</button>
-      </div>
-    </div>
-    <div class="card" data-name="עמית טויזר">
-      <div class="card-top">
-        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779815851888-balypy9diii.jpg" class="avatar" alt="עמית טויזר">
-        <div class="card-info">
-          <h2>עמית טויזר</h2>
-          <p class="meta">32 · תל אביב</p>
-          <span class="field-chip">טכנולוגיה ופיתוח</span>
-        </div>
-      </div>
-      <div class="chips-row"><span class="chip filled">פיתוח תוכנה / טכנולוגיה</span><span class="chip filled">ייעוץ פיננסי / השקעות</span><span class="chip filled">כתיבה ותוכן</span><span class="chip filled">שיווק דיגיטלי</span><span class="chip filled">חיבורים ונטוורקינג</span></div>
-      <div class="chips-row"><span class="chip">פיתוח תוכנה / טכנולוגיה</span><span class="chip">חיבורים ונטוורקינג</span></div>
-      <div class="chips-row"><span class="chip">טיולים</span><span class="chip">מוזיקה</span><span class="chip">קריאה</span><span class="chip">סרטים וסדרות</span><span class="chip">משחקי לוח</span><span class="chip">טבע</span><span class="chip">כתיבה</span></div>
-      <p class="fun-fact">שטתי לאנטארקטיקה</p>
-      <div class="card-footer">
-        <a href="https://wa.me/972525052677" class="wa-btn" target="_blank">WhatsApp</a>
-        <button class="phone-btn" data-phone="052-5052677" onclick="copyPhone(this)">052-5052677</button>
-      </div>
-    </div>
-    <div class="card" data-name="גיא דרורי">
-      <div class="card-top">
-        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779816179170-2nauxcxvqgn.jpg" class="avatar" alt="גיא דרורי">
-        <div class="card-info">
-          <h2>גיא דרורי</h2>
-          <p class="meta">36 · רמת גן</p>
-          <span class="field-chip">פרילנס / עצמאי</span>
-        </div>
-      </div>
-      <div class="chips-row"><span class="chip filled">תרגום / שפות</span><span class="chip filled">אירועים ולוגיסטיקה</span><span class="chip filled">חינוך והוראה</span><span class="chip filled">כתיבה ותוכן</span></div>
-      <div class="chips-row"><span class="chip">ייעוץ משפטי</span></div>
-      <div class="chips-row"><span class="chip">גיימינג</span><span class="chip">סרטים וסדרות</span><span class="chip">מוזיקה</span><span class="chip">קריאה</span><span class="chip">משחקי לוח</span><span class="chip">יצירה ואומנות</span></div>
-      <p class="fun-fact">אלוף עולם לשעבר בNaruto Arena</p>
-      <div class="card-footer">
-        <a href="https://wa.me/9720524522064" class="wa-btn" target="_blank">WhatsApp</a>
-        <button class="phone-btn" data-phone="+9720524522064" onclick="copyPhone(this)">+9720524522064</button>
-      </div>
-    </div>
     <div class="card" data-name="עדי">
       <div class="card-top">
         <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779816494509-tbk6cx4bjgd.jpg" class="avatar" alt="עדי">
@@ -597,9 +437,9 @@
           <span class="field-chip">חינוך והוראה · מומחית בהוראה מתקנת</span>
         </div>
       </div>
-      <div class="chips-row"><span class="chip filled">חינוך והוראה</span></div>
-      <div class="chips-row"><span class="chip">ייעוץ פיננסי / השקעות</span></div>
-      <div class="chips-row"><span class="chip">ריקוד</span></div>
+      <div class="section"><p class="section-label">מה אני יכול/ה לעזור</p><div class="chips-row"><span class="chip filled">חינוך והוראה</span></div></div>
+      <div class="section"><p class="section-label">במה אשמח לעזרה</p><div class="chips-row"><span class="chip">ייעוץ פיננסי / השקעות</span></div></div>
+      <div class="section"><p class="section-label">תחביבים</p><div class="chips-row"><span class="chip">ריקוד</span></div></div>
       <p class="fun-fact">אוהבת לאכול נרבה</p>
       <div class="card-footer">
         <a href="https://wa.me/9727566304" class="wa-btn" target="_blank">WhatsApp</a>
@@ -615,9 +455,9 @@
           <span class="field-chip">עסקים ופיננסים</span>
         </div>
       </div>
-      <div class="chips-row"><span class="chip filled">ייעוץ עסקי / יזמות</span><span class="chip filled">מנטורינג / קואצ׳ינג</span><span class="chip filled">חיבורים ונטוורקינג</span><span class="chip filled">ייעוץ פיננסי / השקעות</span></div>
-      <div class="chips-row"><span class="chip">חיבורים ונטוורקינג</span><span class="chip">ייעוץ משפטי</span></div>
-      <div class="chips-row"><span class="chip">ספורט</span><span class="chip">משחקי לוח</span><span class="chip">מוזיקה</span><span class="chip">גיימינג</span></div>
+      <div class="section"><p class="section-label">מה אני יכול/ה לעזור</p><div class="chips-row"><span class="chip filled">ייעוץ עסקי / יזמות</span><span class="chip filled">מנטורינג / קואצ׳ינג</span><span class="chip filled">חיבורים ונטוורקינג</span><span class="chip filled">ייעוץ פיננסי / השקעות</span></div></div>
+      <div class="section"><p class="section-label">במה אשמח לעזרה</p><div class="chips-row"><span class="chip">חיבורים ונטוורקינג</span><span class="chip">ייעוץ משפטי</span></div></div>
+      <div class="section"><p class="section-label">תחביבים</p><div class="chips-row"><span class="chip">ספורט</span><span class="chip">משחקי לוח</span><span class="chip">מוזיקה</span><span class="chip">גיימינג</span></div></div>
       <p class="fun-fact">יש לי קשר מאוד בעייתי עם בעלי חיים😂</p>
       <div class="card-footer">
         <a href="https://wa.me/972525052676" class="wa-btn" target="_blank">WhatsApp</a>
@@ -633,67 +473,49 @@
           <span class="field-chip">סטודנט/ית · כלכלן</span>
         </div>
       </div>
-      <div class="chips-row"><span class="chip filled">ייעוץ עסקי / יזמות</span><span class="chip filled">נדל&quot;ן</span><span class="chip filled">חיבורים ונטוורקינג</span><span class="chip filled">מנטורינג / קואצ׳ינג</span><span class="chip filled">ייעוץ פיננסי / השקעות</span></div>
-      <div class="chips-row"><span class="chip">חיבורים ונטוורקינג</span><span class="chip">מנטורינג / קואצ׳ינג</span><span class="chip">נדל&quot;ן</span><span class="chip">ייעוץ משפטי</span><span class="chip">רפואה ובריאות</span></div>
-      <div class="chips-row"><span class="chip">ספורט</span><span class="chip">כושר</span><span class="chip">גיימינג</span><span class="chip">טיולים</span><span class="chip">סרטים וסדרות</span><span class="chip">מוזיקה</span><span class="chip">קריאה</span></div>
+      <div class="section"><p class="section-label">מה אני יכול/ה לעזור</p><div class="chips-row"><span class="chip filled">ייעוץ עסקי / יזמות</span><span class="chip filled">נדל&quot;ן</span><span class="chip filled">חיבורים ונטוורקינג</span><span class="chip filled">מנטורינג / קואצ׳ינג</span><span class="chip filled">ייעוץ פיננסי / השקעות</span></div></div>
+      <div class="section"><p class="section-label">במה אשמח לעזרה</p><div class="chips-row"><span class="chip">חיבורים ונטוורקינג</span><span class="chip">מנטורינג / קואצ׳ינג</span><span class="chip">נדל&quot;ן</span><span class="chip">ייעוץ משפטי</span><span class="chip">רפואה ובריאות</span></div></div>
+      <div class="section"><p class="section-label">תחביבים</p><div class="chips-row"><span class="chip">ספורט</span><span class="chip">כושר</span><span class="chip">גיימינג</span><span class="chip">טיולים</span><span class="chip">סרטים וסדרות</span><span class="chip">מוזיקה</span><span class="chip">קריאה</span></div></div>
       <p class="fun-fact">חליתי במלריה במהלך התנדבות באפריקה</p>
       <div class="card-footer">
         <a href="https://wa.me/972587806960" class="wa-btn" target="_blank">WhatsApp</a>
         <button class="phone-btn" data-phone="0587806960" onclick="copyPhone(this)">058-7806960</button>
       </div>
     </div>
-    <div class="card" data-name="שי בוחניק">
+    <div class="card" data-name="עמיר ביתן">
       <div class="card-top">
-        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779816077491-noultrqne9b.jpg" class="avatar" alt="שי בוחניק">
+        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779817319074-93m48n009a5.jpg" class="avatar" alt="עמיר ביתן">
         <div class="card-info">
-          <h2>שי בוחניק</h2>
-          <p class="meta">29 · אופקים</p>
-          <span class="field-chip">הנדסה ובנייה · מהנדס מכונות</span>
+          <h2>עמיר ביתן</h2>
+          <p class="meta">45 · מיתר</p>
+          <span class="field-chip">טכנולוגיה ופיתוח</span>
         </div>
       </div>
-      <div class="chips-row"><span class="chip filled">פיתוח תוכנה / טכנולוגיה</span><span class="chip filled">אימון ספורט / כושר</span><span class="chip filled">בנייה ושיפוצים</span><span class="chip filled">אירועים ולוגיסטיקה</span></div>
-      <div class="chips-row"><span class="chip">ייעוץ פיננסי / השקעות</span></div>
-      <div class="chips-row"><span class="chip">ספורט</span><span class="chip">טיולים</span><span class="chip">גיימינג</span><span class="chip">כושר</span><span class="chip">סרטים וסדרות</span></div>
-      <p class="fun-fact">לא אוהב קוסקוס</p>
+      <div class="section"><p class="section-label">מה אני יכול/ה לעזור</p><div class="chips-row"><span class="chip filled">טיפול בילדים</span></div></div>
+      <div class="section"><p class="section-label">במה אשמח לעזרה</p><div class="chips-row"><span class="chip">מנטורינג / קואצ׳ינג</span><span class="chip">בישול / קייטרינג</span><span class="chip">אימון ספורט / כושר</span><span class="chip">תרגום / שפות</span><span class="chip">ניהול רשתות חברתיות</span></div></div>
+      <div class="section"><p class="section-label">תחביבים</p><div class="chips-row"><span class="chip">יצירה ואומנות</span><span class="chip">טבע</span></div></div>
+      <p class="fun-fact">פעמיים חצי מרתון</p>
       <div class="card-footer">
-        <a href="https://wa.me/972528790023" class="wa-btn" target="_blank">WhatsApp</a>
-        <button class="phone-btn" data-phone="0528790023" onclick="copyPhone(this)">052-8790023</button>
+        <a href="https://wa.me/972526054990" class="wa-btn" target="_blank">WhatsApp</a>
+        <button class="phone-btn" data-phone="+972526054990" onclick="copyPhone(this)">+972526054990</button>
       </div>
     </div>
-    <div class="card" data-name="אדם אלגרינאוי">
+    <div class="card" data-name="עמית טויזר">
       <div class="card-top">
-        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779814136473-q3eoq94gi29.jpg" class="avatar" alt="אדם אלגרינאוי">
+        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779815851888-balypy9diii.jpg" class="avatar" alt="עמית טויזר">
         <div class="card-info">
-          <h2>אדם אלגרינאוי</h2>
-          <p class="meta">21 · רהט</p>
-          <span class="field-chip">סטודנט/ית · מדעי המחשב</span>
+          <h2>עמית טויזר</h2>
+          <p class="meta">32 · תל אביב</p>
+          <span class="field-chip">טכנולוגיה ופיתוח</span>
         </div>
       </div>
-      <div class="chips-row"><span class="chip filled">פיתוח תוכנה / טכנולוגיה</span><span class="chip filled">תרגום / שפות</span></div>
-      <div class="chips-row"><span class="chip">שיווק דיגיטלי</span></div>
-      <div class="chips-row"><span class="chip">גיימינג</span><span class="chip">מוזיקה</span><span class="chip">ספורט</span></div>
-      <p class="fun-fact">אני ערבי</p>
+      <div class="section"><p class="section-label">מה אני יכול/ה לעזור</p><div class="chips-row"><span class="chip filled">פיתוח תוכנה / טכנולוגיה</span><span class="chip filled">ייעוץ פיננסי / השקעות</span><span class="chip filled">כתיבה ותוכן</span><span class="chip filled">שיווק דיגיטלי</span><span class="chip filled">חיבורים ונטוורקינג</span></div></div>
+      <div class="section"><p class="section-label">במה אשמח לעזרה</p><div class="chips-row"><span class="chip">פיתוח תוכנה / טכנולוגיה</span><span class="chip">חיבורים ונטוורקינג</span></div></div>
+      <div class="section"><p class="section-label">תחביבים</p><div class="chips-row"><span class="chip">טיולים</span><span class="chip">מוזיקה</span><span class="chip">קריאה</span><span class="chip">סרטים וסדרות</span><span class="chip">משחקי לוח</span><span class="chip">טבע</span><span class="chip">כתיבה</span></div></div>
+      <p class="fun-fact">שטתי לאנטארקטיקה</p>
       <div class="card-footer">
-        <a href="https://wa.me/972543566160" class="wa-btn" target="_blank">WhatsApp</a>
-        <button class="phone-btn" data-phone="0543566160" onclick="copyPhone(this)">054-3566160</button>
-      </div>
-    </div>
-    <div class="card" data-name="אוהד לנקרי">
-      <div class="card-top">
-        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779814247138-h9clnmcnxk9.jpg" class="avatar" alt="אוהד לנקרי">
-        <div class="card-info">
-          <h2>אוהד לנקרי</h2>
-          <p class="meta">24 · אופקים / בש</p>
-          <span class="field-chip">סטודנט/ית · הנדסת תעשייה וניהול</span>
-        </div>
-      </div>
-      <div class="chips-row"><span class="chip filled">ניהול רשתות חברתיות</span><span class="chip filled">אירועים ולוגיסטיקה</span><span class="chip filled">בישול / קייטרינג</span></div>
-      <div class="chips-row"><span class="chip">ייעוץ פיננסי / השקעות</span><span class="chip">ייעוץ משפטי</span><span class="chip">חיבורים ונטוורקינג</span></div>
-      <div class="chips-row"><span class="chip">בישול</span><span class="chip">מוזיקה</span><span class="chip">סרטים וסדרות</span></div>
-      <p class="fun-fact">אני אלרגי לליצ׳י</p>
-      <div class="card-footer">
-        <a href="https://wa.me/972525717486" class="wa-btn" target="_blank">WhatsApp</a>
-        <button class="phone-btn" data-phone="0525717486" onclick="copyPhone(this)">052-5717486</button>
+        <a href="https://wa.me/972525052677" class="wa-btn" target="_blank">WhatsApp</a>
+        <button class="phone-btn" data-phone="052-5052677" onclick="copyPhone(this)">052-5052677</button>
       </div>
     </div>
     <div class="card" data-name="צ׳ילי לנקרי">
@@ -705,67 +527,247 @@
           <span class="field-chip">פרילנס / עצמאי · כלבה</span>
         </div>
       </div>
-      <div class="chips-row"><span class="chip filled">טיפול בילדים</span></div>
-      <div class="chips-row"><span class="chip">נהיגה / הסעות</span><span class="chip">אימון ספורט / כושר</span></div>
-      <div class="chips-row"><span class="chip">בישול</span><span class="chip">יוגה ומדיטציה</span></div>
+      <div class="section"><p class="section-label">מה אני יכול/ה לעזור</p><div class="chips-row"><span class="chip filled">טיפול בילדים</span></div></div>
+      <div class="section"><p class="section-label">במה אשמח לעזרה</p><div class="chips-row"><span class="chip">נהיגה / הסעות</span><span class="chip">אימון ספורט / כושר</span></div></div>
+      <div class="section"><p class="section-label">תחביבים</p><div class="chips-row"><span class="chip">בישול</span><span class="chip">יוגה ומדיטציה</span></div></div>
       <p class="fun-fact">בגלגול הקודם הייתי סבתא מרוקאית</p>
       <div class="card-footer">
         <a href="https://wa.me/972511111111" class="wa-btn" target="_blank">WhatsApp</a>
         <button class="phone-btn" data-phone="0511111111" onclick="copyPhone(this)">051-1111111</button>
       </div>
     </div>
-    <div class="card" data-name="אוריאן שהרבני ">
+    <div class="card" data-name="צפריר נבון ">
       <div class="card-top">
-        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779814231043-ms0nz95lb8.jpg" class="avatar" alt="אוריאן שהרבני ">
+        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779818951533-epqt59v7r3t.jpg" class="avatar" alt="צפריר נבון ">
         <div class="card-info">
-          <h2>אוריאן שהרבני </h2>
-          <p class="meta">24 · קרית אונו - באר שבע </p>
-          <span class="field-chip">סטודנט/ית</span>
+          <h2>צפריר נבון </h2>
+          <p class="meta">38 · אופקים </p>
+          <span class="field-chip">הנדסה ובנייה · הנדסה כימית</span>
         </div>
       </div>
-      <div class="chips-row"><span class="chip filled">חינוך והוראה</span><span class="chip filled">טיפול בילדים</span><span class="chip filled">אימון ספורט / כושר</span></div>
-      <div class="chips-row"><span class="chip">חיבורים ונטוורקינג</span></div>
-      <div class="chips-row"><span class="chip">ספורט</span><span class="chip">כושר</span><span class="chip">יוגה ומדיטציה</span><span class="chip">טבע</span></div>
-      <p class="fun-fact">שיש לי אזרחות צרפתית </p>
+      <div class="section"><p class="section-label">מה אני יכול/ה לעזור</p><div class="chips-row"><span class="chip filled">בישול / קייטרינג</span></div></div>
+      <div class="section"><p class="section-label">במה אשמח לעזרה</p><div class="chips-row"><span class="chip">אימון ספורט / כושר</span></div></div>
+      <div class="section"><p class="section-label">תחביבים</p><div class="chips-row"><span class="chip">צילום</span><span class="chip">בישול</span><span class="chip">ספורט</span><span class="chip">כושר</span></div></div>
+      <p class="fun-fact">.</p>
       <div class="card-footer">
-        <a href="https://wa.me/972545440268" class="wa-btn" target="_blank">WhatsApp</a>
-        <button class="phone-btn" data-phone="0545440268" onclick="copyPhone(this)">054-5440268</button>
+        <a href="https://wa.me/972543006285" class="wa-btn" target="_blank">WhatsApp</a>
+        <button class="phone-btn" data-phone="+972543006285" onclick="copyPhone(this)">+972543006285</button>
       </div>
     </div>
-    <div class="card" data-name="יהל עומיסי">
+    <div class="card" data-name="קובי סבאג">
       <div class="card-top">
-        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779813965816-0f0qe4pfisb.jpg" class="avatar" alt="יהל עומיסי">
+        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779898463053-efvs8t7ng7j.jpg" class="avatar" alt="קובי סבאג">
         <div class="card-info">
-          <h2>יהל עומיסי</h2>
-          <p class="meta">26 · כרם בן שמן </p>
-          <span class="field-chip">אחר · טיפול</span>
+          <h2>קובי סבאג</h2>
+          <p class="meta">36 · שדרות</p>
+          <span class="field-chip">פרילנס / עצמאי · דיינות. סופר סת&quot;ם</span>
         </div>
       </div>
-      <div class="chips-row"><span class="chip filled">כתיבה ותוכן</span><span class="chip filled">טיפול בילדים</span><span class="chip filled">אירועים ולוגיסטיקה</span><span class="chip filled">בישול / קייטרינג</span><span class="chip filled">מנטורינג / קואצ׳ינג</span></div>
-      <div class="chips-row"><span class="chip">ייעוץ פיננסי / השקעות</span><span class="chip">בנייה ושיפוצים</span><span class="chip">ייעוץ עסקי / יזמות</span><span class="chip">ייעוץ משפטי</span><span class="chip">מנטורינג / קואצ׳ינג</span></div>
-      <div class="chips-row"><span class="chip">טיולים</span><span class="chip">מוזיקה</span><span class="chip">משחקי לוח</span><span class="chip">יצירה ואומנות</span><span class="chip">ריקוד</span><span class="chip">יוגה ומדיטציה</span><span class="chip">קרוספיט</span></div>
-      <p class="fun-fact">הייתי שש שנים בצבא </p>
+      
+      
+      
+      <p class="fun-fact">.</p>
       <div class="card-footer">
-        <a href="https://wa.me/972546677816" class="wa-btn" target="_blank">WhatsApp</a>
-        <button class="phone-btn" data-phone="0546677816" onclick="copyPhone(this)">054-6677816</button>
+        <a href="https://wa.me/972527454616" class="wa-btn" target="_blank">WhatsApp</a>
+        <button class="phone-btn" data-phone="+972527454616" onclick="copyPhone(this)">+972527454616</button>
       </div>
     </div>
-    <div class="card" data-name="אייל לנקרי">
+    <div class="card" data-name="קובי וקנין">
       <div class="card-top">
-        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779813843193-wz77t4wqneo.jpg" class="avatar" alt="אייל לנקרי">
+        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779818096012-0itaafim364k.jpg" class="avatar" alt="קובי וקנין">
         <div class="card-info">
-          <h2>אייל לנקרי</h2>
-          <p class="meta">21 · אופקים</p>
-          <span class="field-chip">אחר · עובד בדודאים</span>
+          <h2>קובי וקנין</h2>
+          <p class="meta">32 · אופקים</p>
+          <span class="field-chip">אחר · טייס ניסוי על מטוסי אנדרטה</span>
         </div>
       </div>
-      <div class="chips-row"><span class="chip filled">חיבורים ונטוורקינג</span><span class="chip filled">בישול / קייטרינג</span><span class="chip filled">אירועים ולוגיסטיקה</span><span class="chip filled">ניהול רשתות חברתיות</span><span class="chip filled">נהיגה / הסעות</span></div>
-      <div class="chips-row"><span class="chip">ייעוץ פיננסי / השקעות</span><span class="chip">נדל&quot;ן</span><span class="chip">ייעוץ עסקי / יזמות</span><span class="chip">אירועים ולוגיסטיקה</span><span class="chip">בנייה ושיפוצים</span></div>
-      <div class="chips-row"><span class="chip">טיולים</span><span class="chip">בישול</span><span class="chip">סרטים וסדרות</span><span class="chip">גיימינג</span><span class="chip">טבע</span></div>
-      <p class="fun-fact">יש לי תשובה לכל שאלה, נסו אותי</p>
+      <div class="section"><p class="section-label">מה אני יכול/ה לעזור</p><div class="chips-row"><span class="chip filled">כתיבה ותוכן</span></div></div>
+      
+      <div class="section"><p class="section-label">תחביבים</p><div class="chips-row"><span class="chip">טיולים</span><span class="chip">מוזיקה</span><span class="chip">קריאה</span><span class="chip">טבע</span><span class="chip">כתיבה</span></div></div>
+      <p class="fun-fact">אני גאה בצד הכורדי שלי יותר מהמרוקאי</p>
       <div class="card-footer">
-        <a href="https://wa.me/972522350093" class="wa-btn" target="_blank">WhatsApp</a>
-        <button class="phone-btn" data-phone="0522350093" onclick="copyPhone(this)">052-2350093</button>
+        <a href="https://wa.me/972528282156" class="wa-btn" target="_blank">WhatsApp</a>
+        <button class="phone-btn" data-phone="+972528282156" onclick="copyPhone(this)">+972528282156</button>
+      </div>
+    </div>
+    <div class="card" data-name="רוני חוה ">
+      <div class="card-top">
+        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779910767535-f278nanovh.jpg" class="avatar" alt="רוני חוה ">
+        <div class="card-info">
+          <h2>רוני חוה </h2>
+          <p class="meta">38 · אתונה </p>
+          <span class="field-chip">שיווק ומכירות</span>
+        </div>
+      </div>
+      <div class="section"><p class="section-label">מה אני יכול/ה לעזור</p><div class="chips-row"><span class="chip filled">שיווק דיגיטלי</span><span class="chip filled">כתיבה ותוכן</span><span class="chip filled">חיבורים ונטוורקינג</span></div></div>
+      
+      <div class="section"><p class="section-label">תחביבים</p><div class="chips-row"><span class="chip">טיולים</span><span class="chip">קריאה</span><span class="chip">מוזיקה</span><span class="chip">סרטים וסדרות</span></div></div>
+      <p class="fun-fact">בלתי מנוצחת בשש בש ! </p>
+      <div class="card-footer">
+        <a href="https://wa.me/9720545805141" class="wa-btn" target="_blank">WhatsApp</a>
+        <button class="phone-btn" data-phone="+9720545805141" onclick="copyPhone(this)">+9720545805141</button>
+      </div>
+    </div>
+    <div class="card" data-name="רועי ולירון ביתן">
+      <div class="card-top">
+        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779817781899-ayvcm9kh3w.jpg" class="avatar" alt="רועי ולירון ביתן">
+        <div class="card-info">
+          <h2>רועי ולירון ביתן</h2>
+          <p class="meta">45 · תל אביב</p>
+          <span class="field-chip">פרילנס / עצמאי · סוחר בבורסה</span>
+        </div>
+      </div>
+      
+      
+      
+      <p class="fun-fact">אין</p>
+      <div class="card-footer">
+        <a href="https://wa.me/9720546764980" class="wa-btn" target="_blank">WhatsApp</a>
+        <button class="phone-btn" data-phone="+9720546764980" onclick="copyPhone(this)">+9720546764980</button>
+      </div>
+    </div>
+    <div class="card" data-name="רותם ביתן">
+      <div class="card-top">
+        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779821953410-oaev2ojc5g.jpg" class="avatar" alt="רותם ביתן">
+        <div class="card-info">
+          <h2>רותם ביתן</h2>
+          <p class="meta">37 · באר שבע</p>
+          <span class="field-chip">הנדסה ובנייה · pmo</span>
+        </div>
+      </div>
+      <div class="section"><p class="section-label">מה אני יכול/ה לעזור</p><div class="chips-row"><span class="chip filled">אימון ספורט / כושר</span></div></div>
+      <div class="section"><p class="section-label">במה אשמח לעזרה</p><div class="chips-row"><span class="chip">אימון ספורט / כושר</span></div></div>
+      <div class="section"><p class="section-label">תחביבים</p><div class="chips-row"><span class="chip">ספורט</span><span class="chip">טיולים</span><span class="chip">סרטים וסדרות</span><span class="chip">כושר</span></div></div>
+      <p class="fun-fact">יש לי אחות תאומה </p>
+      <div class="card-footer">
+        <a href="https://wa.me/9720545507797" class="wa-btn" target="_blank">WhatsApp</a>
+        <button class="phone-btn" data-phone="+9720545507797" onclick="copyPhone(this)">+9720545507797</button>
+      </div>
+    </div>
+    <div class="card" data-name="רותם דדון">
+      <div class="card-top">
+        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779817435841-66htbktjrl3.jpg" class="avatar" alt="רותם דדון">
+        <div class="card-info">
+          <h2>רותם דדון</h2>
+          <p class="meta">40 · באר שבע</p>
+          <span class="field-chip">אחר · רכש</span>
+        </div>
+      </div>
+      
+      
+      <div class="section"><p class="section-label">תחביבים</p><div class="chips-row"><span class="chip">ספורט</span><span class="chip">טיולים</span><span class="chip">בישול</span></div></div>
+      <p class="fun-fact">הייתי טכנאית מטוסים 10 שנים F15</p>
+      <div class="card-footer">
+        <a href="https://wa.me/972502004799" class="wa-btn" target="_blank">WhatsApp</a>
+        <button class="phone-btn" data-phone="+972502004799" onclick="copyPhone(this)">+972502004799</button>
+      </div>
+    </div>
+    <div class="card" data-name="שהם ביתן">
+      <div class="card-top">
+        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779818479606-iksiqj6j8vc.jpg" class="avatar" alt="שהם ביתן">
+        <div class="card-info">
+          <h2>שהם ביתן</h2>
+          <p class="meta">24 · אופקים</p>
+          <span class="field-chip">רפואה ובריאות · דימותנית רפואית</span>
+        </div>
+      </div>
+      <div class="section"><p class="section-label">מה אני יכול/ה לעזור</p><div class="chips-row"><span class="chip filled">עיצוב גרפי / UI</span><span class="chip filled">אירועים ולוגיסטיקה</span><span class="chip filled">טיפול בילדים</span><span class="chip filled">נהיגה / הסעות</span></div></div>
+      <div class="section"><p class="section-label">במה אשמח לעזרה</p><div class="chips-row"><span class="chip">ייעוץ עסקי / יזמות</span><span class="chip">נדל&quot;ן</span><span class="chip">מנטורינג / קואצ׳ינג</span></div></div>
+      <div class="section"><p class="section-label">תחביבים</p><div class="chips-row"><span class="chip">טיולים</span><span class="chip">סרטים וסדרות</span><span class="chip">יצירה ואומנות</span><span class="chip">מוזיקה</span><span class="chip">ריקוד</span></div></div>
+      <p class="fun-fact">אני לא אוהבת גמבה</p>
+      <div class="card-footer">
+        <a href="https://wa.me/972536287262" class="wa-btn" target="_blank">WhatsApp</a>
+        <button class="phone-btn" data-phone="+972536287262" onclick="copyPhone(this)">+972536287262</button>
+      </div>
+    </div>
+    <div class="card" data-name="שי בוחניק">
+      <div class="card-top">
+        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779816077491-noultrqne9b.jpg" class="avatar" alt="שי בוחניק">
+        <div class="card-info">
+          <h2>שי בוחניק</h2>
+          <p class="meta">29 · אופקים</p>
+          <span class="field-chip">הנדסה ובנייה · מהנדס מכונות</span>
+        </div>
+      </div>
+      <div class="section"><p class="section-label">מה אני יכול/ה לעזור</p><div class="chips-row"><span class="chip filled">פיתוח תוכנה / טכנולוגיה</span><span class="chip filled">אימון ספורט / כושר</span><span class="chip filled">בנייה ושיפוצים</span><span class="chip filled">אירועים ולוגיסטיקה</span></div></div>
+      <div class="section"><p class="section-label">במה אשמח לעזרה</p><div class="chips-row"><span class="chip">ייעוץ פיננסי / השקעות</span></div></div>
+      <div class="section"><p class="section-label">תחביבים</p><div class="chips-row"><span class="chip">ספורט</span><span class="chip">טיולים</span><span class="chip">גיימינג</span><span class="chip">כושר</span><span class="chip">סרטים וסדרות</span></div></div>
+      <p class="fun-fact">לא אוהב קוסקוס</p>
+      <div class="card-footer">
+        <a href="https://wa.me/972528790023" class="wa-btn" target="_blank">WhatsApp</a>
+        <button class="phone-btn" data-phone="0528790023" onclick="copyPhone(this)">052-8790023</button>
+      </div>
+    </div>
+    <div class="card" data-name="שילת וקנין">
+      <div class="card-top">
+        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779825817589-a43fr39cb2q.jpg" class="avatar" alt="שילת וקנין">
+        <div class="card-info">
+          <h2>שילת וקנין</h2>
+          <p class="meta">32 · אופקים</p>
+          <span class="field-chip">אחר · קלינאית תקשורת</span>
+        </div>
+      </div>
+      <div class="section"><p class="section-label">מה אני יכול/ה לעזור</p><div class="chips-row"><span class="chip filled">טיפול בילדים</span></div></div>
+      
+      
+      <p class="fun-fact">לא מפתיעה</p>
+      <div class="card-footer">
+        <a href="https://wa.me/972524823493" class="wa-btn" target="_blank">WhatsApp</a>
+        <button class="phone-btn" data-phone="+972524823493" onclick="copyPhone(this)">+972524823493</button>
+      </div>
+    </div>
+    <div class="card" data-name="שיראל בוהדנה">
+      <div class="card-top">
+        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779822222128-wo3emx0fmt.jpg" class="avatar" alt="שיראל בוהדנה">
+        <div class="card-info">
+          <h2>שיראל בוהדנה</h2>
+          <p class="meta">38 · אופקים</p>
+          <span class="field-chip">חינוך והוראה · גיל הרך</span>
+        </div>
+      </div>
+      <div class="section"><p class="section-label">מה אני יכול/ה לעזור</p><div class="chips-row"><span class="chip filled">חינוך והוראה</span><span class="chip filled">בנייה ושיפוצים</span><span class="chip filled">טיפול בילדים</span></div></div>
+      <div class="section"><p class="section-label">במה אשמח לעזרה</p><div class="chips-row"><span class="chip">אימון ספורט / כושר</span><span class="chip">צילום / וידאו</span><span class="chip">שיווק דיגיטלי</span></div></div>
+      <div class="section"><p class="section-label">תחביבים</p><div class="chips-row"><span class="chip">בישול</span><span class="chip">מוזיקה</span><span class="chip">יצירה ואומנות</span><span class="chip">צילום</span><span class="chip">כושר</span></div></div>
+      <p class="fun-fact">אני</p>
+      <div class="card-footer">
+        <a href="https://wa.me/9720526800149" class="wa-btn" target="_blank">WhatsApp</a>
+        <button class="phone-btn" data-phone="+9720526800149" onclick="copyPhone(this)">+9720526800149</button>
+      </div>
+    </div>
+    <div class="card" data-name="שירה שלמה הכהן">
+      <div class="card-top">
+        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779821559361-vglti8dxvzg.jpg" class="avatar" alt="שירה שלמה הכהן">
+        <div class="card-info">
+          <h2>שירה שלמה הכהן</h2>
+          <p class="meta">48 · אופקים</p>
+          <span class="field-chip">ממשל ומגזר ציבורי · מנהלת פרויקטים במנהל חינוך</span>
+        </div>
+      </div>
+      <div class="section"><p class="section-label">מה אני יכול/ה לעזור</p><div class="chips-row"><span class="chip filled">חינוך והוראה</span><span class="chip filled">טיפול בילדים</span><span class="chip filled">בישול / קייטרינג</span></div></div>
+      <div class="section"><p class="section-label">במה אשמח לעזרה</p><div class="chips-row"><span class="chip">אימון ספורט / כושר</span></div></div>
+      
+      <p class="fun-fact">חולמת על טיול אחרי צבא עם כל המשפחה</p>
+      <div class="card-footer">
+        <a href="https://wa.me/9720509002622" class="wa-btn" target="_blank">WhatsApp</a>
+        <button class="phone-btn" data-phone="+9720509002622" onclick="copyPhone(this)">+9720509002622</button>
+      </div>
+    </div>
+    <div class="card" data-name="ori ezra">
+      <div class="card-top">
+        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779826551964-6p59dgv8r98.jpg" class="avatar" alt="Ori Ezra">
+        <div class="card-info">
+          <h2>Ori Ezra</h2>
+          <p class="meta">29 · Clearwater, Florida</p>
+          <span class="field-chip">טכנולוגיה ופיתוח · Executive Account Manager</span>
+        </div>
+      </div>
+      <div class="section"><p class="section-label">מה אני יכול/ה לעזור</p><div class="chips-row"><span class="chip filled">ייעוץ עסקי / יזמות</span><span class="chip filled">נדל&quot;ן</span><span class="chip filled">נהיגה / הסעות</span><span class="chip filled">פיתוח תוכנה / טכנולוגיה</span><span class="chip filled">בנייה ושיפוצים</span></div></div>
+      
+      <div class="section"><p class="section-label">תחביבים</p><div class="chips-row"><span class="chip">ספורט</span><span class="chip">גיימינג</span><span class="chip">משחקי לוח</span><span class="chip">טיולים</span><span class="chip">טבע</span><span class="chip">Skydiving, SCUBA Diving, Wakeboarding, Off Roading...</span></div></div>
+      <p class="fun-fact">I like extreme sports</p>
+      <div class="card-footer">
+        <a href="https://wa.me/17275127971" class="wa-btn" target="_blank">WhatsApp</a>
+        <button class="phone-btn" data-phone="+17275127971" onclick="copyPhone(this)">+17275127971</button>
       </div>
     </div></div>
   <script>
