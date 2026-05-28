@@ -38,19 +38,34 @@
     .phone-btn{flex:1;border:1px solid #e8e5e1;color:#0d0d0d;background:transparent;font-family:'Heebo',sans-serif;font-size:13px;padding:10px;border-radius:9999px;cursor:pointer;transition:all .2s;direction:ltr}
     .phone-btn:hover{border-color:#be4b1e;color:#be4b1e}
     .no-results{text-align:center;color:#be4b1e;opacity:.55;font-size:14px;padding:60px 0;grid-column:1/-1}
+    .filter-section{max-width:960px;margin:0 auto 36px;padding:0 16px}
+    .filter-title{font-family:'Rubik',sans-serif;font-weight:300;font-size:26px;color:#0d0d0d;margin-bottom:6px}
+    .filter-sub{font-size:13px;color:#be4b1e;opacity:.65;margin-bottom:16px}
+    .filter-chips{display:flex;flex-wrap:wrap;gap:8px}
+    .filter-chip{font-family:'Heebo',sans-serif;font-size:12px;padding:7px 16px;border-radius:9999px;border:1px solid #e8e5e1;color:#0d0d0d;background:#fff;cursor:pointer;transition:all .2s}
+    .filter-chip:hover{border-color:#be4b1e;color:#be4b1e}
+    .filter-chip.active{background:#be4b1e;border-color:#be4b1e;color:#fff}
   </style>
 </head>
 <body>
   <header>
     <p class="eyebrow">החוט שמחבר</p>
     <h1>דור<br>ההמשך</h1>
-    <p class="count">40 משתתפים</p>
+    <p class="count">41 משתתפים</p>
   </header>
   <div class="search-wrap">
-    <input type="search" id="q" placeholder="חיפוש לפי שם..." oninput="filter()">
+    <input type="search" id="q" placeholder="חיפוש לפי שם..." oninput="applyFilters()">
+  </div>
+  <div class="filter-section">
+    <h2 class="filter-title">מחפש עזרה?</h2>
+    <p class="filter-sub">בחר תחום ותמצא מי יכול לעזור לך</p>
+    <div class="filter-chips" id="filters">
+      <button class="filter-chip active" data-skill="">הצג הכל</button>
+      <button class="filter-chip" data-skill="אימון ספורט / כושר">אימון ספורט / כושר</button><button class="filter-chip" data-skill="אירועים ולוגיסטיקה">אירועים ולוגיסטיקה</button><button class="filter-chip" data-skill="בישול / קייטרינג">בישול / קייטרינג</button><button class="filter-chip" data-skill="בנייה ושיפוצים">בנייה ושיפוצים</button><button class="filter-chip" data-skill="חיבורים ונטוורקינג">חיבורים ונטוורקינג</button><button class="filter-chip" data-skill="חינוך והוראה">חינוך והוראה</button><button class="filter-chip" data-skill="טיפול בילדים">טיפול בילדים</button><button class="filter-chip" data-skill="ייעוץ משפטי">ייעוץ משפטי</button><button class="filter-chip" data-skill="ייעוץ עסקי / יזמות">ייעוץ עסקי / יזמות</button><button class="filter-chip" data-skill="ייעוץ פיננסי / השקעות">ייעוץ פיננסי / השקעות</button><button class="filter-chip" data-skill="כתיבה ותוכן">כתיבה ותוכן</button><button class="filter-chip" data-skill="מנטורינג / קואצ׳ינג">מנטורינג / קואצ׳ינג</button><button class="filter-chip" data-skill="נדל&quot;ן">נדל&quot;ן</button><button class="filter-chip" data-skill="נהיגה / הסעות">נהיגה / הסעות</button><button class="filter-chip" data-skill="ניהול רשתות חברתיות">ניהול רשתות חברתיות</button><button class="filter-chip" data-skill="עיצוב גרפי / ui">עיצוב גרפי / UI</button><button class="filter-chip" data-skill="פיתוח תוכנה / טכנולוגיה">פיתוח תוכנה / טכנולוגיה</button><button class="filter-chip" data-skill="צילום / וידאו">צילום / וידאו</button><button class="filter-chip" data-skill="רפואה ובריאות">רפואה ובריאות</button><button class="filter-chip" data-skill="שיווק דיגיטלי">שיווק דיגיטלי</button><button class="filter-chip" data-skill="תרגום / שפות">תרגום / שפות</button>
+    </div>
   </div>
   <div class="grid" id="grid">
-    <div class="card" data-name="אדיר ביתן">
+    <div class="card" data-name="אדיר ביתן" data-offers="ייעוץ עסקי / יזמות;רפואה ובריאות;חיבורים ונטוורקינג;צילום / וידאו">
       <div class="card-top">
         <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779899239773-2nu562muy5c.jpg" class="avatar" alt="אדיר ביתן">
         <div class="card-info">
@@ -68,7 +83,7 @@
         <button class="phone-btn" data-phone="+9720532583529" onclick="copyPhone(this)">+9720532583529</button>
       </div>
     </div>
-    <div class="card" data-name="אוהד לנקרי">
+    <div class="card" data-name="אוהד לנקרי" data-offers="ניהול רשתות חברתיות;אירועים ולוגיסטיקה;בישול / קייטרינג">
       <div class="card-top">
         <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779814247138-h9clnmcnxk9.jpg" class="avatar" alt="אוהד לנקרי">
         <div class="card-info">
@@ -86,7 +101,7 @@
         <button class="phone-btn" data-phone="0525717486" onclick="copyPhone(this)">052-5717486</button>
       </div>
     </div>
-    <div class="card" data-name="אופיר ביתן">
+    <div class="card" data-name="אופיר ביתן" data-offers="ייעוץ עסקי / יזמות;חיבורים ונטוורקינג;מנטורינג / קואצ׳ינג;אירועים ולוגיסטיקה;כתיבה ותוכן">
       <div class="card-top">
         <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779830885254-v6d10qs4uih.jpg" class="avatar" alt="אופיר ביתן">
         <div class="card-info">
@@ -104,7 +119,7 @@
         <button class="phone-btn" data-phone="+972529251036" onclick="copyPhone(this)">+972529251036</button>
       </div>
     </div>
-    <div class="card" data-name="אוריאן שהרבני ">
+    <div class="card" data-name="אוריאן שהרבני " data-offers="חינוך והוראה;טיפול בילדים;אימון ספורט / כושר">
       <div class="card-top">
         <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779814231043-ms0nz95lb8.jpg" class="avatar" alt="אוריאן שהרבני ">
         <div class="card-info">
@@ -122,7 +137,7 @@
         <button class="phone-btn" data-phone="0545440268" onclick="copyPhone(this)">054-5440268</button>
       </div>
     </div>
-    <div class="card" data-name="אייל לנקרי">
+    <div class="card" data-name="אייל לנקרי" data-offers="חיבורים ונטוורקינג;בישול / קייטרינג;אירועים ולוגיסטיקה;ניהול רשתות חברתיות;נהיגה / הסעות">
       <div class="card-top">
         <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779813843193-wz77t4wqneo.jpg" class="avatar" alt="אייל לנקרי">
         <div class="card-info">
@@ -140,7 +155,7 @@
         <button class="phone-btn" data-phone="0522350093" onclick="copyPhone(this)">052-2350093</button>
       </div>
     </div>
-    <div class="card" data-name="אדם אלגרינאוי">
+    <div class="card" data-name="אדם אלגרינאוי" data-offers="פיתוח תוכנה / טכנולוגיה;תרגום / שפות">
       <div class="card-top">
         <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779814136473-q3eoq94gi29.jpg" class="avatar" alt="אדם אלגרינאוי">
         <div class="card-info">
@@ -158,7 +173,7 @@
         <button class="phone-btn" data-phone="0543566160" onclick="copyPhone(this)">054-3566160</button>
       </div>
     </div>
-    <div class="card" data-name="איתי נובהארי ">
+    <div class="card" data-name="איתי נובהארי " data-offers="עיצוב גרפי / ui;תרגום / שפות;פיתוח תוכנה / טכנולוגיה;אימון ספורט / כושר;ייעוץ פיננסי / השקעות">
       <div class="card-top">
         <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779817811772-oak6lxxyr8.jpg" class="avatar" alt="איתי נובהארי ">
         <div class="card-info">
@@ -176,7 +191,7 @@
         <button class="phone-btn" data-phone="+972532825353" onclick="copyPhone(this)">+972532825353</button>
       </div>
     </div>
-    <div class="card" data-name="אלה אמויאל">
+    <div class="card" data-name="אלה אמויאל" data-offers="רפואה ובריאות">
       <div class="card-top">
         <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779900739014-a8qdze6uwtb.jpg" class="avatar" alt="אלה אמויאל">
         <div class="card-info">
@@ -194,7 +209,7 @@
         <button class="phone-btn" data-phone="+9720506263861" onclick="copyPhone(this)">+9720506263861</button>
       </div>
     </div>
-    <div class="card" data-name="אפיק לנקרי">
+    <div class="card" data-name="אפיק לנקרי" data-offers="פיתוח תוכנה / טכנולוגיה;עיצוב גרפי / ui;אירועים ולוגיסטיקה;תרגום / שפות">
       <div class="card-top">
         <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779817195319-yknsn8x7ub.jpg" class="avatar" alt="אפיק לנקרי">
         <div class="card-info">
@@ -212,7 +227,7 @@
         <button class="phone-btn" data-phone="+972526657644" onclick="copyPhone(this)">+972526657644</button>
       </div>
     </div>
-    <div class="card" data-name="ביתן אליהו">
+    <div class="card" data-name="ביתן אליהו" data-offers="ייעוץ עסקי / יזמות;ייעוץ משפטי;רפואה ובריאות;טיפול בילדים;תרגום / שפות">
       <div class="card-top">
         <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779817787225-nfyi8t39g5g.jpg" class="avatar" alt="ביתן אליהו">
         <div class="card-info">
@@ -230,7 +245,7 @@
         <button class="phone-btn" data-phone="0508672500" onclick="copyPhone(this)">050-8672500</button>
       </div>
     </div>
-    <div class="card" data-name="ברית בן דוד ">
+    <div class="card" data-name="ברית בן דוד " data-offers="פיתוח תוכנה / טכנולוגיה">
       <div class="card-top">
         <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779817861214-2vtt0zcvujr.jpg" class="avatar" alt="ברית בן דוד ">
         <div class="card-info">
@@ -248,7 +263,7 @@
         <button class="phone-btn" data-phone="+972526616255" onclick="copyPhone(this)">+972526616255</button>
       </div>
     </div>
-    <div class="card" data-name="גיא דרורי">
+    <div class="card" data-name="גיא דרורי" data-offers="תרגום / שפות;אירועים ולוגיסטיקה;חינוך והוראה;כתיבה ותוכן">
       <div class="card-top">
         <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779816179170-2nauxcxvqgn.jpg" class="avatar" alt="גיא דרורי">
         <div class="card-info">
@@ -266,7 +281,7 @@
         <button class="phone-btn" data-phone="+9720524522064" onclick="copyPhone(this)">+9720524522064</button>
       </div>
     </div>
-    <div class="card" data-name="הילה ביתן">
+    <div class="card" data-name="הילה ביתן" data-offers="אימון ספורט / כושר">
       <div class="card-top">
         <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779817282494-n3l6fpqk4e.jpg" class="avatar" alt="הילה ביתן">
         <div class="card-info">
@@ -284,7 +299,7 @@
         <button class="phone-btn" data-phone="+9720526054991" onclick="copyPhone(this)">+9720526054991</button>
       </div>
     </div>
-    <div class="card" data-name="יהודה אמויאל">
+    <div class="card" data-name="יהודה אמויאל" data-offers="ייעוץ פיננסי / השקעות;תרגום / שפות">
       <div class="card-top">
         <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779902142731-qptyjgfv3ai.jpg" class="avatar" alt="יהודה אמויאל">
         <div class="card-info">
@@ -302,13 +317,13 @@
         <button class="phone-btn" data-phone="+972526064553" onclick="copyPhone(this)">+972526064553</button>
       </div>
     </div>
-    <div class="card" data-name="יהל עומיסי">
+    <div class="card" data-name="יהל עומיסי" data-offers="כתיבה ותוכן;טיפול בילדים;אירועים ולוגיסטיקה;בישול / קייטרינג;מנטורינג / קואצ׳ינג">
       <div class="card-top">
         <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779813965816-0f0qe4pfisb.jpg" class="avatar" alt="יהל עומיסי">
         <div class="card-info">
           <h2>יהל עומיסי</h2>
           <p class="meta">26 · כרם בן שמן </p>
-          <span class="field-chip">אחר · טיפול-מאמנת NLP </span>
+          <span class="field-chip">אחר · טיפול</span>
         </div>
       </div>
       <div class="section"><p class="section-label">מה אני יכול/ה לעזור</p><div class="chips-row"><span class="chip filled">כתיבה ותוכן</span><span class="chip filled">טיפול בילדים</span><span class="chip filled">אירועים ולוגיסטיקה</span><span class="chip filled">בישול / קייטרינג</span><span class="chip filled">מנטורינג / קואצ׳ינג</span></div></div>
@@ -320,7 +335,7 @@
         <button class="phone-btn" data-phone="0546677816" onclick="copyPhone(this)">054-6677816</button>
       </div>
     </div>
-    <div class="card" data-name="יסמין ועמי ביתן ">
+    <div class="card" data-name="יסמין ועמי ביתן " data-offers="רפואה ובריאות">
       <div class="card-top">
         <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779825813650-60txz4owumi.jpg" class="avatar" alt="יסמין ועמי ביתן ">
         <div class="card-info">
@@ -338,7 +353,7 @@
         <button class="phone-btn" data-phone="+972503418301" onclick="copyPhone(this)">+972503418301</button>
       </div>
     </div>
-    <div class="card" data-name="ליאור אורנשטיין">
+    <div class="card" data-name="ליאור אורנשטיין" data-offers="">
       <div class="card-top">
         <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779817385676-cac6seyoma5.jpg" class="avatar" alt="ליאור אורנשטיין">
         <div class="card-info">
@@ -356,7 +371,7 @@
         <button class="phone-btn" data-phone="+9720526038554" onclick="copyPhone(this)">+9720526038554</button>
       </div>
     </div>
-    <div class="card" data-name="מתן בן דוד">
+    <div class="card" data-name="מתן בן דוד" data-offers="בנייה ושיפוצים">
       <div class="card-top">
         <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779817899001-jgzwji70emk.jpg" class="avatar" alt="מתן בן דוד">
         <div class="card-info">
@@ -374,7 +389,7 @@
         <button class="phone-btn" data-phone="+9720508666946" onclick="copyPhone(this)">+9720508666946</button>
       </div>
     </div>
-    <div class="card" data-name="נוי ביתן נבון">
+    <div class="card" data-name="נוי ביתן נבון" data-offers="רפואה ובריאות">
       <div class="card-top">
         <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779818411544-onidxm40lma.jpg" class="avatar" alt="נוי ביתן נבון">
         <div class="card-info">
@@ -392,7 +407,7 @@
         <button class="phone-btn" data-phone="+9720524898642" onclick="copyPhone(this)">+9720524898642</button>
       </div>
     </div>
-    <div class="card" data-name="נועה שוורץ ">
+    <div class="card" data-name="נועה שוורץ " data-offers="טיפול בילדים">
       <div class="card-top">
         <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779898799563-kjdowy4tlf9.jpg" class="avatar" alt="נועה שוורץ ">
         <div class="card-info">
@@ -410,7 +425,7 @@
         <button class="phone-btn" data-phone="+972502477743" onclick="copyPhone(this)">+972502477743</button>
       </div>
     </div>
-    <div class="card" data-name="נועה כהן">
+    <div class="card" data-name="נועה כהן" data-offers="">
       <div class="card-top">
         <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779816944751-v4mdsnf6i5f.jpg" class="avatar" alt="נועה כהן">
         <div class="card-info">
@@ -428,7 +443,7 @@
         <button class="phone-btn" data-phone="+9720542585823" onclick="copyPhone(this)">+9720542585823</button>
       </div>
     </div>
-    <div class="card" data-name="עדי">
+    <div class="card" data-name="עדי" data-offers="חינוך והוראה">
       <div class="card-top">
         <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779816494509-tbk6cx4bjgd.jpg" class="avatar" alt="עדי">
         <div class="card-info">
@@ -446,7 +461,7 @@
         <button class="phone-btn" data-phone="+9727566304" onclick="copyPhone(this)">972-7566304</button>
       </div>
     </div>
-    <div class="card" data-name="עומר טויזר">
+    <div class="card" data-name="עומר טויזר" data-offers="ייעוץ עסקי / יזמות;מנטורינג / קואצ׳ינג;חיבורים ונטוורקינג;ייעוץ פיננסי / השקעות">
       <div class="card-top">
         <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779816067146-byoixjh63cw.jpg" class="avatar" alt="עומר טויזר">
         <div class="card-info">
@@ -464,7 +479,7 @@
         <button class="phone-btn" data-phone="0525052676" onclick="copyPhone(this)">052-5052676</button>
       </div>
     </div>
-    <div class="card" data-name="עידו טויזר">
+    <div class="card" data-name="עידו טויזר" data-offers="ייעוץ עסקי / יזמות;נדל&quot;ן;חיבורים ונטוורקינג;מנטורינג / קואצ׳ינג;ייעוץ פיננסי / השקעות">
       <div class="card-top">
         <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779815772568-51hgzs7vmy9.jpg" class="avatar" alt="עידו טויזר">
         <div class="card-info">
@@ -482,7 +497,7 @@
         <button class="phone-btn" data-phone="0587806960" onclick="copyPhone(this)">058-7806960</button>
       </div>
     </div>
-    <div class="card" data-name="עמיר ביתן">
+    <div class="card" data-name="עמיר ביתן" data-offers="טיפול בילדים">
       <div class="card-top">
         <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779817319074-93m48n009a5.jpg" class="avatar" alt="עמיר ביתן">
         <div class="card-info">
@@ -500,7 +515,7 @@
         <button class="phone-btn" data-phone="+972526054990" onclick="copyPhone(this)">+972526054990</button>
       </div>
     </div>
-    <div class="card" data-name="עמית טויזר">
+    <div class="card" data-name="עמית טויזר" data-offers="פיתוח תוכנה / טכנולוגיה;ייעוץ פיננסי / השקעות;כתיבה ותוכן;שיווק דיגיטלי;חיבורים ונטוורקינג">
       <div class="card-top">
         <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779815851888-balypy9diii.jpg" class="avatar" alt="עמית טויזר">
         <div class="card-info">
@@ -518,7 +533,7 @@
         <button class="phone-btn" data-phone="052-5052677" onclick="copyPhone(this)">052-5052677</button>
       </div>
     </div>
-    <div class="card" data-name="צ׳ילי לנקרי">
+    <div class="card" data-name="צ׳ילי לנקרי" data-offers="טיפול בילדים">
       <div class="card-top">
         <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779814392757-9dwgpqf1mp5.jpg" class="avatar" alt="צ׳ילי לנקרי">
         <div class="card-info">
@@ -536,7 +551,7 @@
         <button class="phone-btn" data-phone="0511111111" onclick="copyPhone(this)">051-1111111</button>
       </div>
     </div>
-    <div class="card" data-name="צפריר נבון ">
+    <div class="card" data-name="צפריר נבון " data-offers="בישול / קייטרינג">
       <div class="card-top">
         <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779818951533-epqt59v7r3t.jpg" class="avatar" alt="צפריר נבון ">
         <div class="card-info">
@@ -554,7 +569,7 @@
         <button class="phone-btn" data-phone="+972543006285" onclick="copyPhone(this)">+972543006285</button>
       </div>
     </div>
-    <div class="card" data-name="קובי סבאג">
+    <div class="card" data-name="קובי סבאג" data-offers="">
       <div class="card-top">
         <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779898463053-efvs8t7ng7j.jpg" class="avatar" alt="קובי סבאג">
         <div class="card-info">
@@ -572,7 +587,7 @@
         <button class="phone-btn" data-phone="+972527454616" onclick="copyPhone(this)">+972527454616</button>
       </div>
     </div>
-    <div class="card" data-name="קובי וקנין">
+    <div class="card" data-name="קובי וקנין" data-offers="כתיבה ותוכן">
       <div class="card-top">
         <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779818096012-0itaafim364k.jpg" class="avatar" alt="קובי וקנין">
         <div class="card-info">
@@ -590,7 +605,7 @@
         <button class="phone-btn" data-phone="+972528282156" onclick="copyPhone(this)">+972528282156</button>
       </div>
     </div>
-    <div class="card" data-name="רוני חוה ">
+    <div class="card" data-name="רוני חוה " data-offers="שיווק דיגיטלי;כתיבה ותוכן;חיבורים ונטוורקינג">
       <div class="card-top">
         <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779910767535-f278nanovh.jpg" class="avatar" alt="רוני חוה ">
         <div class="card-info">
@@ -608,7 +623,7 @@
         <button class="phone-btn" data-phone="+9720545805141" onclick="copyPhone(this)">+9720545805141</button>
       </div>
     </div>
-    <div class="card" data-name="רועי ולירון ביתן">
+    <div class="card" data-name="רועי ולירון ביתן" data-offers="">
       <div class="card-top">
         <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779817781899-ayvcm9kh3w.jpg" class="avatar" alt="רועי ולירון ביתן">
         <div class="card-info">
@@ -626,7 +641,7 @@
         <button class="phone-btn" data-phone="+9720546764980" onclick="copyPhone(this)">+9720546764980</button>
       </div>
     </div>
-    <div class="card" data-name="רותם ביתן">
+    <div class="card" data-name="רותם ביתן" data-offers="אימון ספורט / כושר">
       <div class="card-top">
         <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779821953410-oaev2ojc5g.jpg" class="avatar" alt="רותם ביתן">
         <div class="card-info">
@@ -644,7 +659,7 @@
         <button class="phone-btn" data-phone="+9720545507797" onclick="copyPhone(this)">+9720545507797</button>
       </div>
     </div>
-    <div class="card" data-name="רותם דדון">
+    <div class="card" data-name="רותם דדון" data-offers="">
       <div class="card-top">
         <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779817435841-66htbktjrl3.jpg" class="avatar" alt="רותם דדון">
         <div class="card-info">
@@ -662,7 +677,25 @@
         <button class="phone-btn" data-phone="+972502004799" onclick="copyPhone(this)">+972502004799</button>
       </div>
     </div>
-    <div class="card" data-name="שהם ביתן">
+    <div class="card" data-name="רז חוה" data-offers="ייעוץ עסקי / יזמות;נדל&quot;ן;בנייה ושיפוצים">
+      <div class="card-top">
+        <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779858080654-wsxq9pijtvc.jpg" class="avatar" alt="רז חוה">
+        <div class="card-info">
+          <h2>רז חוה</h2>
+          <p class="meta">34 · אתונה </p>
+          <span class="field-chip">נדל&quot;ן</span>
+        </div>
+      </div>
+      <div class="section"><p class="section-label">מה אני יכול/ה לעזור</p><div class="chips-row"><span class="chip filled">ייעוץ עסקי / יזמות</span><span class="chip filled">נדל&quot;ן</span><span class="chip filled">בנייה ושיפוצים</span></div></div>
+      
+      <div class="section"><p class="section-label">תחביבים</p><div class="chips-row"><span class="chip">בישול</span><span class="chip">טיולים</span><span class="chip">יצירה ואומנות</span><span class="chip">טבע</span></div></div>
+      <p class="fun-fact">למדתי מלונאות </p>
+      <div class="card-footer">
+        <a href="https://wa.me/4915229852355" class="wa-btn" target="_blank">WhatsApp</a>
+        <button class="phone-btn" data-phone="+4915229852355" onclick="copyPhone(this)">+4915229852355</button>
+      </div>
+    </div>
+    <div class="card" data-name="שהם ביתן" data-offers="עיצוב גרפי / ui;אירועים ולוגיסטיקה;טיפול בילדים;נהיגה / הסעות">
       <div class="card-top">
         <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779818479606-iksiqj6j8vc.jpg" class="avatar" alt="שהם ביתן">
         <div class="card-info">
@@ -680,7 +713,7 @@
         <button class="phone-btn" data-phone="+972536287262" onclick="copyPhone(this)">+972536287262</button>
       </div>
     </div>
-    <div class="card" data-name="שי בוחניק">
+    <div class="card" data-name="שי בוחניק" data-offers="פיתוח תוכנה / טכנולוגיה;אימון ספורט / כושר;בנייה ושיפוצים;אירועים ולוגיסטיקה">
       <div class="card-top">
         <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779816077491-noultrqne9b.jpg" class="avatar" alt="שי בוחניק">
         <div class="card-info">
@@ -698,7 +731,7 @@
         <button class="phone-btn" data-phone="0528790023" onclick="copyPhone(this)">052-8790023</button>
       </div>
     </div>
-    <div class="card" data-name="שילת וקנין">
+    <div class="card" data-name="שילת וקנין" data-offers="טיפול בילדים">
       <div class="card-top">
         <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779825817589-a43fr39cb2q.jpg" class="avatar" alt="שילת וקנין">
         <div class="card-info">
@@ -716,7 +749,7 @@
         <button class="phone-btn" data-phone="+972524823493" onclick="copyPhone(this)">+972524823493</button>
       </div>
     </div>
-    <div class="card" data-name="שיראל בוהדנה">
+    <div class="card" data-name="שיראל בוהדנה" data-offers="חינוך והוראה;בנייה ושיפוצים;טיפול בילדים">
       <div class="card-top">
         <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779822222128-wo3emx0fmt.jpg" class="avatar" alt="שיראל בוהדנה">
         <div class="card-info">
@@ -734,7 +767,7 @@
         <button class="phone-btn" data-phone="+9720526800149" onclick="copyPhone(this)">+9720526800149</button>
       </div>
     </div>
-    <div class="card" data-name="שירה שלמה הכהן">
+    <div class="card" data-name="שירה שלמה הכהן" data-offers="חינוך והוראה;טיפול בילדים;בישול / קייטרינג">
       <div class="card-top">
         <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779821559361-vglti8dxvzg.jpg" class="avatar" alt="שירה שלמה הכהן">
         <div class="card-info">
@@ -752,7 +785,7 @@
         <button class="phone-btn" data-phone="+9720509002622" onclick="copyPhone(this)">+9720509002622</button>
       </div>
     </div>
-    <div class="card" data-name="ori ezra">
+    <div class="card" data-name="ori ezra" data-offers="ייעוץ עסקי / יזמות;נדל&quot;ן;נהיגה / הסעות;פיתוח תוכנה / טכנולוגיה;בנייה ושיפוצים">
       <div class="card-top">
         <img src="https://rlvwfqttfeglsmircbhl.supabase.co/storage/v1/object/public/participant-photos/1779826551964-6p59dgv8r98.jpg" class="avatar" alt="Ori Ezra">
         <div class="card-info">
@@ -771,11 +804,21 @@
       </div>
     </div></div>
   <script>
-    function filter(){
+    let activeSkill='';
+    document.getElementById('filters').addEventListener('click',function(e){
+      const btn=e.target.closest('.filter-chip');
+      if(!btn)return;
+      activeSkill=btn.dataset.skill;
+      document.querySelectorAll('.filter-chip').forEach(b=>b.classList.toggle('active',b===btn));
+      applyFilters();
+    });
+    function applyFilters(){
       const q=document.getElementById('q').value.trim().toLowerCase();
       let shown=0;
       document.querySelectorAll('.card').forEach(c=>{
-        const v=!q||c.dataset.name.includes(q);
+        const nameOk=!q||c.dataset.name.includes(q);
+        const skillOk=!activeSkill||c.dataset.offers.split(';').includes(activeSkill);
+        const v=nameOk&&skillOk;
         c.style.display=v?'':'none';
         if(v)shown++;
       });
